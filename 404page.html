@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Aisle Not Found | FreshMart</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+
+            --primary-color: #2ecc71;
+            --primary-dark: #1e8449;
+            --bg-dark: #0d1b12;
+            --text-color: #1a1a1a;
+            --font-title: 'Playfair Display', serif;
+            --font-text: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-text);
+            background-color: var(--bg-dark);
+            overflow-x: hidden;
+        }
+
+        .error-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: #ffffff;
+        }
+
+        .error-bg {
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+
+            background-image: url('./asset/q7.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            animation: slowZoom 25s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .error-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: radial-gradient(circle at center, rgba(13, 27, 18, 0.75) 0%, rgba(13, 27, 18, 0.98) 100%);
+            z-index: 2;
+        }
+
+        .error-container {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 5%;
+        }
+
+        .error-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+            border-radius: 30px;
+            padding: 60px 50px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            visibility: hidden;
+
+        }
+
+        .error-code {
+            font-family: var(--font-title);
+            font-size: clamp(6rem, 15vw, 10rem);
+            font-weight: 900;
+            line-height: 1;
+            margin: 0 0 10px 0;
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.9);
+
+            background: url('./asset/w4.webp') center/cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: pulseText 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseText {
+            0% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .error-title {
+            font-family: var(--font-title);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .error-desc {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+        }
+
+        .error-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-text);
+            transition: all 0.3s ease;
+        }
+
+        .error-btn.primary {
+            background-color: var(--primary-color);
+            color: var(--bg-dark);
+            border: 2px solid var(--primary-color);
+        }
+
+        .error-btn.primary:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .error-btn.secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .error-btn.secondary:hover {
+            background-color: #fff;
+            color: var(--bg-dark);
+        }
+
+        .error-btn span,
+        .error-btn i {
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .error-card {
+                padding: 40px 30px;
+            }
+
+            .error-desc {
+                font-size: 0.95rem;
+                margin-bottom: 30px;
+            }
+
+            .error-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .error-btn {
+                width: 100%;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="error-404" class="error-section">
+
+
+        <div class="error-bg"></div>
+        <div class="error-overlay"></div>
+
+
+        <div class="error-container">
+            <div class="error-card error-anim">
+
+                <div style="font-size: 40px; color: var(--primary-color); margin-bottom: 10px;">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+
+                <h1 class="error-code">404</h1>
+
+                <h2 class="error-title">Aisle Not Found!</h2>
+
+                <p class="error-desc">
+                    Oops! Looks like you've wandered into an empty aisle. The page you are looking for is currently out
+                    of stock or has been moved to another shelf.
+                </p>
+
+                <div class="error-buttons">
+                    <button onclick="window.history.back()" class="error-btn secondary magnetic-btn">
+                        <i class="fas fa-arrow-left"></i> <span>Go Back</span>
+                    </button>
+
+                    <a href="index.html" class="error-btn primary magnetic-btn">
+                        <span>Back to Store</span> <i class="fas fa-store"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            if (typeof gsap !== 'undefined') {
+                gsap.fromTo(".error-anim",
+                    {
+                        y: 50,
+                        scale: 0.9,
+                        autoAlpha: 0
+                    },
+                    {
+                        y: 0,
+                        scale: 1,
+                        autoAlpha: 1,
+                        duration: 1.2,
+                        ease: "back.out(1.2)",
+                        delay: 0.2
+                    }
+                );
+            }
+
+
+            const magneticBtns = document.querySelectorAll('.magnetic-btn');
+            if (magneticBtns.length > 0 && typeof gsap !== 'undefined') {
+                magneticBtns.forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+
+                        gsap.to(btn, { x: x * 0.4, y: y * 0.4, duration: 0.5, ease: "power3.out" });
+                    });
+
+                    btn.addEventListener('mouseleave', () => {
+                        gsap.to(btn, { x: 0, y: 0, duration: 1, ease: "elastic.out(1, 0.3)" });
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

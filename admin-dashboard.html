@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | FreshMart</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin-dashboard.css">
+
+
+    <script>
+        if (!sessionStorage.getItem('userEmail')) {
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <a href="index.html"><img src="./asset/s1.webp" alt="logo" class="logo"></a>
+            <div class="dashboard-badge">Store Admin Portal</div>
+        </div>
+
+        <div class="nav-sections">
+            <a class="nav-item active" onclick="switchTab('tab-overview', this, 'Admin Overview')"><i
+                    class="fas fa-tachometer-alt"></i> Overview</a>
+            <a class="nav-item" onclick="switchTab('tab-inventory', this, 'Inventory & Stock')"><i
+                    class="fas fa-boxes"></i> Inventory</a>
+            <a class="nav-item" onclick="switchTab('tab-orders', this, 'Logistics & Orders')"><i
+                    class="fas fa-truck"></i> Logistics</a>
+            <a class="nav-item" onclick="switchTab('tab-customers', this, 'Customer Management')"><i
+                    class="fas fa-users"></i> Customers</a>
+            <a class="nav-item" onclick="switchTab('tab-finance', this, 'Financial Ledger')"><i
+                    class="fas fa-chart-pie"></i> Finance</a>
+            <a class="nav-item" onclick="switchTab('tab-settings', this, 'System Settings')"><i class="fas fa-cogs"></i>
+                Settings</a>
+        </div>
+
+        <div class="profile-card">
+
+            <div class="profile-avatar admin-avatar">
+                <img src="./asset/a27.webp" alt="Admin Profile">
+            </div>
+            <div class="profile-info">
+                <h4 id="userNameDisplay">Loading...</h4>
+                <p id="userEmailDisplay">admin@freshmart.com</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
+                <h2 id="dynamic-page-title" class="page-title">Admin Overview</h2>
+            </div>
+            <div class="topbar-right">
+
+                <a href="index.html" class="header-btn"
+                    style="background: var(--primary); color: #fff; border: none; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);">
+                    <i class="fas fa-home"></i> <span>Back to Home</span>
+                </a>
+
+
+                <button onclick="logout()" class="header-btn logout-btn">
+                    <i class="fas fa-power-off"></i> <span>Logout</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+
+            <div id="tab-overview" class="content-tab active-tab">
+
+                <div class="wallet-marquee mb-30" data-aos="fade-up">
+                    <div class="marquee-track">
+                        <span> LOW STOCK: Organic Avocados (2 kgs left)</span>
+                        <span> SALES SURGE: 15% increase in Dairy orders today</span>
+                        <span> FLEET ALERT: Driver Ramesh delayed by 15 mins</span>
+                        <span> LOW STOCK: Organic Avocados (2 kgs left)</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="stat-icon green"><i class="fas fa-rupee-sign"></i></div>
+                        <div class="stat-details">
+                            <h3>Today's Revenue</h3>
+                            <h2>₹42,500</h2>
+                            <p class="growth positive"><i class="fas fa-arrow-up"></i> 12% from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon blue"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="stat-details">
+                            <h3>New Orders</h3>
+                            <h2>128</h2>
+                            <p class="growth positive"><i class="fas fa-arrow-up"></i> 5% from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon orange"><i class="fas fa-user-plus"></i></div>
+                        <div class="stat-details">
+                            <h3>New Users</h3>
+                            <h2>34</h2>
+                            <p class="growth negative"><i class="fas fa-arrow-down"></i> 2% from yesterday</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-section">
+                    <div class="premium-card" data-aos="fade-right">
+                        <h3 class="card-title"><i class="fas fa-chart-pie text-primary"></i> Sales by Category</h3>
+                        <div class="chart-wrapper">
+                            <div class="chart-container" style="max-width:300px; margin:0 auto;"><canvas
+                                    id="categoryPieChart"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-left">
+                        <h3 class="card-title"><i class="fas fa-bolt text-primary"></i> Admin Quick Actions</h3>
+                        <p class="sub-text">Manage critical operations instantly without navigating menus.</p>
+                        <div class="quick-action-grid mt-15">
+                            <button onclick="window.location.href='404page.html'" class="action-btn"><i
+                                    class="fas fa-plus-circle text-primary"></i> Add
+                                Product</button>
+                            <button onclick="window.location.href='404page.html'" class="action-btn"><i
+                                    class="fas fa-bullhorn text-primary"></i> Send Offer</button>
+                            <button onclick="window.location.href='404page.html'" class="action-btn"><i
+                                    class="fas fa-file-export text-primary"></i> Export
+                                Report</button>
+                            <button onclick="window.location.href='404page.html'" class="action-btn"
+                                style="background:#fff1f2; color:#e74c3c; border-color:#ffe4e6;"><i
+                                    class="fas fa-pause-circle"></i> Halt Orders</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-trophy text-primary"></i> Top Performing Categories</h3>
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="prog-head"><span>Fresh Fruits & Vegetables</span><span>92% (₹9,200)</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 92%; background: var(--primary);"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="prog-head"><span>Dairy & Bakery</span><span>85% (₹8,500)</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 85%; background: #3498db;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="prog-head"><span>Pantry Staples</span><span>60% (₹6,000)</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 60%; background: #f39c12;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-list-alt text-primary"></i> Recent Transactions Summary</h3>
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Order ID</th>
+                                    <th>Category</th>
+                                    <th>Payment</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Oct 08, 2026</td>
+                                    <td>#ORD-8854</td>
+                                    <td>Vegetables</td>
+                                    <td>Credit Card</td>
+                                    <td>₹850</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 05, 2026</td>
+                                    <td>#ORD-8821</td>
+                                    <td>Dairy & Bakery</td>
+                                    <td>Wallet</td>
+                                    <td>₹420</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 02, 2026</td>
+                                    <td>#ORD-8802</td>
+                                    <td>Fruits</td>
+                                    <td>UPI</td>
+                                    <td>₹1,200</td>
+                                </tr>
+                                <tr>
+                                    <td>Sep 28, 2026</td>
+                                    <td>#ORD-8789</td>
+                                    <td>Pantry Staples</td>
+                                    <td>Credit Card</td>
+                                    <td>₹2,150</td>
+                                </tr>
+                                <tr>
+                                    <td>Sep 25, 2026</td>
+                                    <td>#ORD-8750</td>
+                                    <td>Beverages</td>
+                                    <td>Wallet</td>
+                                    <td>₹3,450</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-inventory" class="content-tab">
+
+                <div class="stats-grid mb-30" data-aos="fade-up">
+                    <div class="wallet-balance-card"
+                        style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
+                        <p>Total Products Active in Store</p>
+                        <h2>1,452 Items</h2>
+
+                        <button onclick="window.location.href='404page.html'" class="solid-btn custom-blue-btn mt-15"><i
+                                class="fas fa-download"></i> Download Catalog
+                            CSV</button>
+                    </div>
+                    <div class="points-card"
+                        style="background:#fff1f2; border-color:#fecdd3; flex-direction:column; align-items:flex-start;">
+                        <div style="display:flex; align-items:center; gap:20px;">
+                            <div class="icon-box" style="background:#e11d48;"><i
+                                    class="fas fa-exclamation-triangle"></i></div>
+                            <div>
+                                <h3 style="color:#be123c; font-size:24px; margin-bottom:5px;">18 Items</h3>
+                                <p style="color:#e11d48; font-size:13px;">Out of Stock currently</p>
+                            </div>
+                        </div>
+
+                        <button onclick="window.location.href='404page.html'"
+                            class="outline-btn custom-red-btn mt-15"><i class="fas fa-eye"></i> View Shortage
+                            Report</button>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-truck-loading text-primary"></i> Active Supplier Directory
+                    </h3>
+                    <div class="supplier-grid">
+                        <div class="supplier-card">
+                            <div class="sup-head">
+                                <h4>GreenValley Farms</h4><span class="badge premium-badge"><i class="fas fa-star"></i>
+                                    4.9</span>
+                            </div>
+                            <p>Categories: Organic Veggies, Exotic Fruits</p>
+                            <p>Last Restock: Oct 07, 2026</p>
+                            <div class="sup-actions"><button onclick="window.location.href='404page.html'"
+                                    class="outline-btn"><i class="fas fa-envelope"></i>
+                                    Email</button><button onclick="window.location.href='404page.html'"
+                                    class="action-btn" style="padding:8px 15px;"><i class="fas fa-phone"></i>
+                                    Call</button></div>
+                        </div>
+                        <div class="supplier-card">
+                            <div class="sup-head">
+                                <h4>DailyDairy Co.</h4><span class="badge premium-badge"><i class="fas fa-star"></i>
+                                    4.7</span>
+                            </div>
+                            <p>Categories: Milk, Cheese, Butter</p>
+                            <p>Last Restock: Oct 08, 2026 (Today)</p>
+                            <div class="sup-actions"><button onclick="window.location.href='404page.html'"
+                                    class="outline-btn"><i class="fas fa-envelope"></i>
+                                    Email</button><button onclick="window.location.href='404page.html'"
+                                    class="action-btn" style="padding:8px 15px;"><i class="fas fa-phone"></i>
+                                    Call</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-boxes text-primary"></i> Master Inventory Ledger</h3>
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Unit Price</th>
+                                    <th>Available Stock</th>
+                                    <th>Quick Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Farm Fresh Eggs</td>
+                                    <td>Dairy & Eggs</td>
+                                    <td>₹90 / Dozen</td>
+                                    <td><span class="badge success">145 Units</span></td>
+                                    <td><button onclick="window.location.href='404page.html'" class="outline-btn">Edit
+                                            Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Organic Avocados</td>
+                                    <td>Fruits</td>
+                                    <td>₹250 / Kg</td>
+                                    <td><span class="badge" style="background:#fff1f2;color:#e11d48;">2 Kgs (Low)</span>
+                                    </td>
+                                    <td><button onclick="window.location.href='404page.html'"
+                                            class="outline-btn">Reorder</button></td>
+                                </tr>
+                                <tr>
+                                    <td>A2 Cow Milk</td>
+                                    <td>Dairy</td>
+                                    <td>₹80 / Ltr</td>
+                                    <td><span class="badge success">80 Ltrs</span></td>
+                                    <td><button onclick="window.location.href='404page.html'" class="outline-btn">Edit
+                                            Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Whole Wheat Bread</td>
+                                    <td>Bakery</td>
+                                    <td>₹45 / Pkt</td>
+                                    <td><span class="badge warning">12 Pkts</span></td>
+                                    <td><button onclick="window.location.href='404page.html'" class="outline-btn">Edit
+                                            Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Cold Pressed Oil</td>
+                                    <td>Pantry</td>
+                                    <td>₹1200 / Ltr</td>
+                                    <td><span class="badge success">45 Ltrs</span></td>
+                                    <td><button onclick="window.location.href='404page.html'" class="outline-btn">Edit
+                                            Details</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-orders" class="content-tab">
+
+                <div class="premium-card bg-highlight" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-route text-primary"></i> Live Fleet Tracking Status</h3>
+                    <div class="tracking-progress">
+                        <div class="track-step active"><i class="fas fa-store"></i>
+                            <p>At Store: 15</p>
+                        </div>
+                        <div class="track-line active"></div>
+                        <div class="track-step active"><i class="fas fa-motorcycle"></i>
+                            <p>On Route: 8</p>
+                        </div>
+                        <div class="track-line active"></div>
+                        <div class="track-step active"><i class="fas fa-flag-checkered"></i>
+                            <p>Delivered: 105</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-motorcycle text-primary"></i> Active Delivery Fleet Map</h3>
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Assigned Driver</th>
+                                    <th>Delivery Area</th>
+                                    <th>Estimated ETA</th>
+                                    <th>Current Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-8890</td>
+                                    <td>Ramesh (DL-402)</td>
+                                    <td>T.Nagar</td>
+                                    <td>10 Mins</td>
+                                    <td><span class="badge warning">On Route</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-8889</td>
+                                    <td>Suresh (DL-105)</td>
+                                    <td>OMR</td>
+                                    <td>25 Mins</td>
+                                    <td><span class="badge warning">On Route</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-8888</td>
+                                    <td>Pending Assign</td>
+                                    <td>Adyar</td>
+                                    <td>45 Mins</td>
+                                    <td><span class="badge" style="background:#f1f5f9;color:#64748b;">Awaiting
+                                            Driver</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-8870</td>
+                                    <td>Karthi (DL-901)</td>
+                                    <td>Velachery</td>
+                                    <td>-</td>
+                                    <td><span class="badge success">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-8865</td>
+                                    <td>Manoj (DL-333)</td>
+                                    <td>Guindy</td>
+                                    <td>-</td>
+                                    <td><span class="badge success">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-exclamation-circle text-primary"></i> Delivery Escalations
+                    </h3>
+                    <div class="refund-grid">
+                        <div class="refund-card" style="border-left-color: #e74c3c;">
+                            <div class="ref-icon" style="color:#e74c3c; background:#fff1f2;"><i
+                                    class="fas fa-times-circle"></i></div>
+                            <div class="ref-details">
+                                <h4>Customer Cancelled (#ORD-8812)</h4>
+                                <p>Driver Ramesh waiting at location.</p>
+                            </div>
+                            <button onclick="window.location.href='404page.html'" class="outline-btn"
+                                style="color:#e74c3c; border-color:#e74c3c;">Process
+                                Return</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-customers" class="content-tab">
+
+                <div class="stats-grid mb-30" data-aos="fade-up">
+                    <div class="wallet-balance-card"
+                        style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); align-items:flex-start;">
+                        <p>Total Registered Users</p>
+                        <h2 style="margin-bottom:5px;">12,450</h2>
+
+                        <button onclick="window.location.href='404page.html'" class="solid-btn mt-15"
+                            style="background:#ffffff; color:#6d28d9; border:none; padding:10px 20px; border-radius:10px; font-weight:700; cursor:pointer;"><i
+                                class="fas fa-chart-line"></i> View Analytics</button>
+                    </div>
+                    <div class="points-card" style="background:#f0fdf4; border-color:#bbf7d0;">
+                        <div class="icon-box" style="background:#22c55e;"><i class="fas fa-crown"></i></div>
+                        <div>
+                            <h3 style="color:#166534;">1,200 Premium</h3>
+                            <p style="color:#15803d;">Subscribers yielding 40% of revenue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-address-book text-primary"></i> Customer Directory</h3>
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Email Address</th>
+                                    <th>Total Spends</th>
+                                    <th>Account Tier</th>
+                                    <th>Account Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rajesh Kumar</td>
+                                    <td>rajesh.k@email.com</td>
+                                    <td>₹45,200</td>
+                                    <td><span class="badge premium-badge">Gold</span></td>
+                                    <td><span class="badge success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sneha Reddy</td>
+                                    <td>sneha.r@email.com</td>
+                                    <td>₹12,400</td>
+                                    <td><span class="badge" style="background:#f1f5f9;color:#64748b;">Silver</span></td>
+                                    <td><span class="badge success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Arun Prakash</td>
+                                    <td>arun.p@email.com</td>
+                                    <td>₹85,000</td>
+                                    <td><span class="badge premium-badge">Platinum</span></td>
+                                    <td><span class="badge success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Kavya S.</td>
+                                    <td>kavya@email.com</td>
+                                    <td>₹1,200</td>
+                                    <td><span class="badge" style="background:#f1f5f9;color:#64748b;">Bronze</span></td>
+                                    <td><span class="badge success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Vikram M.</td>
+                                    <td>vikram@email.com</td>
+                                    <td>₹0</td>
+                                    <td><span class="badge" style="background:#f1f5f9;color:#64748b;">Bronze</span></td>
+                                    <td><span class="badge" style="background:#fff1f2;color:#e11d48;">Blocked</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-ticket-alt text-primary"></i> Admin Coupon Generator</h3>
+                    <p class="sub-text mb-15">Create custom discount codes to boost sales during weekends or festivals.
+                    </p>
+                    <div style="display:flex; gap:15px; flex-wrap:wrap; position: relative;">
+                        <input type="text" id="couponCodeInput" class="custom-input"
+                            placeholder="Coupon Code (e.g. DIWALI50)" style="flex:1;">
+                        <input type="number" id="discountInput" class="custom-input" placeholder="Discount %"
+                            style="width:150px;">
+                        <button onclick="window.location.href='404page.html'" id="generateCouponBtn" class="solid-btn"
+                            style="background:var(--primary); color:#fff; padding:15px 25px; border-radius:15px; border:none; font-weight:700; cursor:pointer;"><i
+                                class="fas fa-cog"></i> Generate Code</button>
+                    </div>
+
+                    <div id="couponErrorMsg" class="form-msg error-msg"><i class="fas fa-exclamation-circle"></i> Please
+                        fill out all fields.</div>
+                    <div id="couponSuccessMsg" class="form-msg success-msg"><i class="fas fa-check-circle"></i> Coupon
+                        Generated! Redirecting...</div>
+                </div>
+
+
+            </div>
+
+            <div id="tab-finance" class="content-tab">
+
+                <div class="stats-grid mb-30" data-aos="fade-up">
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="fas fa-arrow-up"></i></div>
+                        <div class="stat-details">
+                            <h3>Monthly Inflow</h3>
+                            <h2>₹12,50,000</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange"><i class="fas fa-arrow-down"></i></div>
+                        <div class="stat-details">
+                            <h3>Vendor Payouts</h3>
+                            <h2>₹8,20,000</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-file-invoice-dollar text-primary"></i> Master Transaction
+                        Ledger</h3>
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Date & Time</th>
+                                    <th>Payment Gateway</th>
+                                    <th>Net Amount</th>
+                                    <th>Settlement Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#TXN-99812</td>
+                                    <td>Oct 08, 14:30</td>
+                                    <td>Razorpay (Card)</td>
+                                    <td><span class="text-primary">+ ₹1,250</span></td>
+                                    <td><span class="badge success">Settled</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#TXN-99811</td>
+                                    <td>Oct 08, 13:15</td>
+                                    <td>PhonePe (UPI)</td>
+                                    <td><span class="text-primary">+ ₹450</span></td>
+                                    <td><span class="badge success">Settled</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#TXN-99810</td>
+                                    <td>Oct 08, 11:00</td>
+                                    <td>FreshMart Wallet</td>
+                                    <td><span class="text-primary">+ ₹890</span></td>
+                                    <td><span class="badge success">Internal</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#TXN-99809</td>
+                                    <td>Oct 07, 18:45</td>
+                                    <td>Stripe (Intl Card)</td>
+                                    <td><span class="text-primary">+ ₹4,500</span></td>
+                                    <td><span class="badge warning">Pending T+2</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#TXN-99808</td>
+                                    <td>Oct 07, 09:30</td>
+                                    <td>Vendor Payout</td>
+                                    <td><span style="color:#e74c3c;">- ₹25,000</span></td>
+                                    <td><span class="badge" style="background:#e2e8f0;color:#475569;">Debited</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-chart-line text-primary"></i> Operational Expense Breakdown
+                    </h3>
+                    <p class="sub-text mb-15">Monthly tracking of major operational outflows.</p>
+                    <div class="expense-list">
+                        <div class="expense-item">
+                            <div class="exp-info"><i class="fas fa-boxes" style="color:#3498db;"></i> <span>Inventory
+                                    Purchases</span></div>
+                            <strong>₹5,50,000</strong>
+                        </div>
+                        <div class="expense-item">
+                            <div class="exp-info"><i class="fas fa-users" style="color:#9b59b6;"></i> <span>Staff &
+                                    Rider Salaries</span></div>
+                            <strong>₹1,80,000</strong>
+                        </div>
+                        <div class="expense-item">
+                            <div class="exp-info"><i class="fas fa-bolt" style="color:#f1c40f;"></i> <span>Store Rent &
+                                    Utilities</span></div>
+                            <strong>₹60,000</strong>
+                        </div>
+                        <div class="expense-item">
+                            <div class="exp-info"><i class="fas fa-server" style="color:#e74c3c;"></i> <span>Software &
+                                    Cloud Servers</span></div>
+                            <strong>₹30,000</strong>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-hand-holding-usd text-primary"></i> Pending Vendor Invoices
+                    </h3>
+                    <p class="sub-text mb-15">Invoices awaiting clearance for this week.</p>
+                    <div class="vendor-invoice-grid">
+                        <div class="vendor-invoice-card" data-aos="zoom-in">
+                            <div class="v-inv-details">
+                                <h4>GreenValley Farms</h4>
+                                <p>Invoice #INV-204 • Due on Oct 10</p>
+                            </div>
+                            <div class="v-inv-action">
+                                <h3>₹45,000</h3>
+                                <button onclick="window.location.href='404page.html'" class="action-btn"
+                                    style="background:var(--primary); color:#fff; padding:8px 15px;">Pay Now</button>
+                            </div>
+                        </div>
+                        <div class="vendor-invoice-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="v-inv-details">
+                                <h4>DailyDairy Co.</h4>
+                                <p>Invoice #INV-210 • Due on Oct 15</p>
+                            </div>
+                            <div class="v-inv-action">
+                                <h3 style="color:#e74c3c;">₹18,500</h3>
+                                <button onclick="window.location.href='404page.html'" class="action-btn"
+                                    style="background:var(--primary); color:#fff; padding:8px 15px;">Pay Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-settings" class="content-tab">
+
+                <div class="premium-card profile-banner"
+                    style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color:#fff;"
+                    data-aos="fade-up">
+
+                    <div class="pb-avatar">
+                        <img src="./asset/a31.webp" alt="Admin Profile Banner">
+                    </div>
+                    <div class="pb-details">
+                        <h2 id="settingsName" style="color:#fff;">Admin Chief</h2>
+                        <p id="settingsEmail" style="color:#94a3b8;">admin@freshmart.com</p>
+                        <span class="badge" style="background:#eab308; color:#000;">Super Administrator</span>
+                    </div>
+                    <button onclick="window.location.href='404page.html'" class="action-btn"
+                        style="margin-left: auto; color:#000;">Manage Roles</button>
+                </div>
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-user-secret text-primary"></i> Admin Activity Log</h3>
+                    <div class="table-responsive">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Admin Name</th>
+                                    <th>Action Performed</th>
+                                    <th>Target Module</th>
+                                    <th>Timestamp</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Super Admin</td>
+                                    <td>Updated Price</td>
+                                    <td>Inventory (Almonds)</td>
+                                    <td>Oct 08, 10:15 AM</td>
+                                    <td><span class="badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Manager Ravi</td>
+                                    <td>Approved Refund</td>
+                                    <td>Order #ORD-8802</td>
+                                    <td>Oct 07, 04:30 PM</td>
+                                    <td><span class="badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Support Staff 1</td>
+                                    <td>Viewed Profile</td>
+                                    <td>Customer (Rajesh)</td>
+                                    <td>Oct 07, 11:20 AM</td>
+                                    <td><span class="badge" style="background:#e2e8f0;color:#475569;">Logged</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Super Admin</td>
+                                    <td>Generated Coupon</td>
+                                    <td>Marketing Module</td>
+                                    <td>Oct 05, 09:00 AM</td>
+                                    <td><span class="badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Unknown IP</td>
+                                    <td>Failed Login</td>
+                                    <td>Admin Portal</td>
+                                    <td>Oct 04, 02:15 AM</td>
+                                    <td><span class="badge" style="background:#fff1f2;color:#e11d48;">Blocked</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-clock text-primary"></i> Store Operating Hours</h3>
+                    <p class="sub-text mb-15">Configure when the app accepts live orders from customers.</p>
+                    <div class="hours-list">
+                        <div class="hour-item">
+                            <span>Monday - Friday</span>
+                            <strong>06:00 AM - 10:00 PM</strong>
+                            <button onclick="window.location.href='404page.html'" class="outline-btn">Edit Time</button>
+                        </div>
+                        <div class="hour-item">
+                            <span>Saturday</span>
+                            <strong>06:00 AM - 11:30 PM</strong>
+                            <button onclick="window.location.href='404page.html'" class="outline-btn">Edit Time</button>
+                        </div>
+                        <div class="hour-item">
+                            <span>Sunday</span>
+                            <strong style="color:var(--primary);"><i class="fas fa-door-open"></i> Open 24
+                                Hours</strong>
+                            <button onclick="window.location.href='404page.html'" class="outline-btn">Edit Time</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="premium-card" data-aos="fade-up">
+                    <h3 class="card-title"><i class="fas fa-plug text-primary"></i> Third-Party API Integrations</h3>
+                    <p class="sub-text mb-15">Manage your connections to external services and gateways.</p>
+                    <div class="api-grid">
+                        <div class="api-card" data-aos="flip-up">
+                            <i class="fab fa-stripe" style="color:#6772e5;"></i>
+                            <h4>Stripe Payments</h4>
+                            <p>Active</p>
+                            <label class="switch"><input type="checkbox" checked><span
+                                    class="slider round"></span></label>
+                        </div>
+                        <div class="api-card" data-aos="flip-up" data-aos-delay="100">
+                            <i class="fab fa-whatsapp" style="color:#25d366;"></i>
+                            <h4>Twilio WhatsApp</h4>
+                            <p>Active</p>
+                            <label class="switch"><input type="checkbox" checked><span
+                                    class="slider round"></span></label>
+                        </div>
+                        <div class="api-card" data-aos="flip-up" data-aos-delay="200">
+                            <i class="fas fa-map-marked-alt" style="color:#ea4335;"></i>
+                            <h4>Google Maps API</h4>
+                            <p>Routing Active</p>
+                            <label class="switch"><input type="checkbox" checked><span
+                                    class="slider round"></span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 800, once: true, offset: 50 });
+            }
+
+            const storedEmail = sessionStorage.getItem('userEmail');
+            if (storedEmail) {
+                let extractedName = storedEmail.split('@')[0];
+                extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+                const nameDisplay = document.getElementById("userNameDisplay");
+                if (nameDisplay) nameDisplay.textContent = "Admin " + extractedName;
+
+                const emailDisplay = document.getElementById("userEmailDisplay");
+                if (emailDisplay) emailDisplay.textContent = storedEmail;
+            }
+
+            initAdminChart();
+
+
+            const generateBtn = document.getElementById("generateCouponBtn");
+            const couponInput = document.getElementById("couponCodeInput");
+            const discountInput = document.getElementById("discountInput");
+            const errorMsg = document.getElementById("couponErrorMsg");
+            const successMsg = document.getElementById("couponSuccessMsg");
+
+            if (generateBtn) {
+                generateBtn.addEventListener("click", () => {
+                    if (couponInput.value.trim() === "" || discountInput.value.trim() === "") {
+
+                        errorMsg.style.display = "block";
+                        successMsg.style.display = "none";
+                        couponInput.style.borderColor = "var(--error-red)";
+                        discountInput.style.borderColor = "var(--error-red)";
+                    } else {
+
+                        errorMsg.style.display = "none";
+                        successMsg.style.display = "block";
+                        couponInput.style.borderColor = "var(--primary)";
+                        discountInput.style.borderColor = "var(--primary)";
+
+
+                        generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                        generateBtn.style.opacity = "0.8";
+                        generateBtn.style.pointerEvents = "none";
+
+
+                        setTimeout(() => {
+                            window.location.href = "404page.html";
+                        }, 1500);
+                    }
+                });
+
+
+                if (couponInput) {
+                    couponInput.addEventListener("input", () => {
+                        couponInput.style.borderColor = "var(--border-color)";
+                        errorMsg.style.display = "none";
+                    });
+                }
+                if (discountInput) {
+                    discountInput.addEventListener("input", () => {
+                        discountInput.style.borderColor = "var(--border-color)";
+                        errorMsg.style.display = "none";
+                    });
+                }
+            }
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('mobile-open');
+
+            if (sidebar.classList.contains('mobile-open')) {
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function switchTab(tabId, element, pageTitle) {
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active-tab'));
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active-tab');
+            element.classList.add('active');
+
+            const titleElement = document.getElementById('dynamic-page-title');
+            if (titleElement) titleElement.innerText = pageTitle;
+
+            setTimeout(() => { if (typeof AOS !== 'undefined') AOS.refresh(); }, 100);
+
+            if (window.innerWidth <= 991) { toggleSidebar(); }
+        }
+
+        function logout() {
+            sessionStorage.removeItem('userEmail');
+            window.location.href = "login.html";
+        }
+
+        function initAdminChart() {
+            const ctx = document.getElementById('categoryPieChart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Dairy & Eggs', 'Fruits', 'Vegetables', 'Pantry'],
+                        datasets: [{
+                            data: [35, 25, 20, 20],
+                            backgroundColor: ['#2ecc71', '#3498db', '#e67e22', '#9b59b6'],
+                            borderWidth: 5,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { padding: 20, font: { family: "'Poppins', sans-serif" } }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

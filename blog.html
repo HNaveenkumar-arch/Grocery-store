@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Grocery Store</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-bg"></div>
+        <div class="glass-card">
+            <div class="premium-spinner"></div>
+            <div class="loader-text">Preparing Fresh Groceries...</div>
+        </div>
+    </div>
+
+    <div class="top-bar" id="top-bar">
+        <div class="moving-text">
+            <span> Special Offer: Get 20% Off on Fresh Organic Vegetables! Use Code: FRESH20 | Free Delivery on orders
+                above $50! </span>
+        </div>
+        <div class="close-btn-bg">
+            <span class="close-btn" id="close-top-bar">&times;</span>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-mobile-header">
+                <a href="index.html" class="logo"><img src="./asset/s1.webp" alt="logo"></a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item mobile-auth">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="signup.html" class="btn btn-signup">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-auth" data-aos="fade-left" data-aos-delay="700">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="blog-hero-section" id="blog-hero">
+
+
+        <div class="bh-bg-slider">
+            <div class="bh-bg-slide active" style="background-image: url('./asset/e1.webp');"></div>
+            <div class="bh-bg-slide" style="background-image: url('./asset/e2.webp');"></div>
+        </div>
+
+
+        <div class="bh-overlay"></div>
+
+        <div class="bh-container">
+
+
+            <div class="bh-left-col">
+
+
+                <div class="bh-breadcrumb">
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <span class="divider">/</span>
+                    <span class="current">Blog</span>
+                </div>
+
+
+                <div class="bh-content-slider">
+
+                    <div class="bh-content-slide active">
+                        <span class="bh-label"><i class="fa-solid fa-book-open"></i> Fresh Living Journal</span>
+                        <h1>Fresh Ideas. Better Choices. <br><span>Happier Kitchens.</span></h1>
+                        <p>Explore our curated articles on healthy eating, smart grocery shopping, and delicious daily
+                            recipes tailored for your family.</p>
+                        <a href="404page.html" class="bh-btn">Explore Articles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+
+                    <div class="bh-content-slide">
+                        <span class="bh-label"><i class="fa-solid fa-leaf"></i> Wellness & Nutrition</span>
+                        <h1>Eat Smart. Live Better. <br><span>Every Single Day.</span></h1>
+                        <p>Discover insider tips from top nutritionists to make the absolute most out of your fresh
+                            organic grocery hauls.</p>
+                        <a href="404page.html" class="bh-btn">Read the Blog <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="bh-right-col">
+
+                <div class="bh-image-slider">
+                    <div class="bh-image-slide active">
+                        <img src="./asset/e3.webp" alt="Kitchen Lifestyle">
+                    </div>
+                    <div class="bh-image-slide">
+                        <img src="./asset/e4.webp" alt="Healthy Food">
+                    </div>
+                </div>
+
+
+                <div class="bh-floating-tags">
+                    <span class="bh-tag tag-1"><i class="fa-solid fa-heart-pulse"></i> Healthy</span>
+                    <span class="bh-tag tag-2"><i class="fa-solid fa-apple-whole"></i> Fresh</span>
+                    <span class="bh-tag tag-3"><i class="fa-solid fa-bolt"></i> Easy</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="featured-story-section" id="featured-story">
+        <div class="fs-container">
+
+            <div class="fs-header">
+                <h2 class="fs-heading">The Fresh Pick of the Week</h2>
+                <p class="fs-subheading">Dive into our top editorial selections, handpicked tips, and ultimate guides
+                    for a healthier kitchen.</p>
+            </div>
+
+            <div class="fs-grid-layout">
+
+
+                <a href="404page.html" class="fs-main-article">
+                    <div class="fs-main-bg" style="background-image: url('./asset/w21.webp');"></div>
+                    <div class="fs-main-overlay"></div>
+
+                    <div class="fs-main-content">
+                        <div class="fs-meta-top">
+                            <span class="fs-category">Guides</span>
+                            <span class="fs-read-time"><i class="fa-regular fa-clock"></i> 5 Min Read</span>
+                        </div>
+
+                        <h3>How to Choose the Freshest Vegetables Every Time</h3>
+
+                        <div class="fs-meta-bottom">
+                            <div class="fs-author">
+                                <img src="./asset/a24.webp" alt="Author">
+                                <span>By Sarah Jenkins</span>
+                            </div>
+                            <span class="fs-date">Oct 12, 2024</span>
+                        </div>
+
+                    </div>
+                </a>
+
+
+                <div class="fs-side-articles">
+
+
+                    <a href="404page.html" class="fs-side-card">
+                        <div class="fs-side-img">
+                            <img src="./asset/w4.webp" alt="Fruits">
+                        </div>
+                        <div class="fs-side-content">
+                            <span class="fs-category-small">Nutrition</span>
+                            <h4>5 Fruits You Should Add to Your Weekly Basket</h4>
+                            <div class="fs-side-meta">
+                                <span><i class="fa-regular fa-clock"></i> 3 Min</span>
+                                <span>Oct 10</span>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="404page.html" class="fs-side-card">
+                        <div class="fs-side-img">
+                            <img src="./asset/q24.webp" alt="Vegetables">
+                        </div>
+                        <div class="fs-side-content">
+                            <span class="fs-category-small">Sustainability</span>
+                            <h4>Simple Ways to Reduce Grocery Waste</h4>
+                            <div class="fs-side-meta">
+                                <span><i class="fa-regular fa-clock"></i> 4 Min</span>
+                                <span>Oct 08</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="fresh-market-section" id="fresh-market">
+
+        <div class="fm-header-wrapper">
+            <h2 class="fm-heading">Fresh From the Market</h2>
+            <p class="fm-subheading">Stay updated with our latest seasonal picks, storage hacks, and organic living
+                guides.</p>
+        </div>
+
+        <div class="fm-track-container">
+            <div class="fm-track">
+
+
+                <a href="404page.html" class="fm-card">
+                    <div class="fm-img-box">
+                        <img src="./asset/w11.webp" alt="Greens">
+                        <div class="fm-overlay"></div>
+                    </div>
+                    <div class="fm-content">
+                        <span class="fm-tag">Guide</span>
+                        <h3>How to Select Fresh Greens</h3>
+                        <div class="fm-btn-wrapper">
+                            <span class="fm-read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="404page.html" class="fm-card">
+                    <div class="fm-img-box">
+                        <img src="./asset/w14.webp" alt="Fruits">
+                        <div class="fm-overlay"></div>
+                    </div>
+                    <div class="fm-content">
+                        <span class="fm-tag">Seasonal</span>
+                        <h3>Best Seasonal Fruits</h3>
+                        <div class="fm-btn-wrapper">
+                            <span class="fm-read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="404page.html" class="fm-card">
+                    <div class="fm-img-box">
+                        <img src="./asset/q7.webp" alt="Freshness">
+                        <div class="fm-overlay"></div>
+                    </div>
+                    <div class="fm-content">
+                        <span class="fm-tag">Tips</span>
+                        <h3>Understanding Food Freshness</h3>
+                        <div class="fm-btn-wrapper">
+                            <span class="fm-read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="404page.html" class="fm-card">
+                    <div class="fm-img-box">
+                        <img src="./asset/q22.webp" alt="Storage">
+                        <div class="fm-overlay"></div>
+                    </div>
+                    <div class="fm-content">
+                        <span class="fm-tag">Hacks</span>
+                        <h3>How to Store Vegetables</h3>
+                        <div class="fm-btn-wrapper">
+                            <span class="fm-read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="404page.html" class="fm-card">
+                    <div class="fm-img-box">
+                        <img src="./asset/q13.webp" alt="Organic">
+                        <div class="fm-overlay"></div>
+                    </div>
+                    <div class="fm-content">
+                        <span class="fm-tag">Comparison</span>
+                        <h3>Organic vs Regular Produce</h3>
+                        <div class="fm-btn-wrapper">
+                            <span class="fm-read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="recipe-journey-section" id="recipe-journey">
+
+        <div class="rj-header">
+            <h2 class="rj-heading">From Grocery Basket to Dinner Table</h2>
+            <p class="rj-subheading">Experience the magical journey of our farm-fresh ingredients transforming into
+                delicious, healthy meals for your family.</p>
+
+
+            <div class="rj-steps">
+                <span class="rj-step"><i class="fa-solid fa-basket-shopping"></i> Choose</span>
+                <i class="fa-solid fa-arrow-right-long rj-arrow"></i>
+                <span class="rj-step"><i class="fa-solid fa-kitchen-set"></i> Prepare</span>
+                <i class="fa-solid fa-arrow-right-long rj-arrow"></i>
+                <span class="rj-step"><i class="fa-solid fa-fire-burner"></i> Cook</span>
+                <i class="fa-solid fa-arrow-right-long rj-arrow"></i>
+                <span class="rj-step"><i class="fa-solid fa-bell-concierge"></i> Serve</span>
+            </div>
+        </div>
+
+        <div class="rj-container">
+            <div class="rj-card">
+
+
+                <div class="rj-content-col">
+                    <span class="rj-featured-tag"><i class="fa-solid fa-star"></i> Featured Recipe</span>
+                    <h3>Creamy Vegetable Pasta</h3>
+                    <p>A rich, comforting, and healthy pasta packed with farm-fresh organic vegetables delivered
+                        straight to your door.</p>
+
+                    <div class="rj-ingredients-wrapper">
+                        <h4><i class="fa-solid fa-clipboard-list"></i> Hover Ingredients to Explore:</h4>
+                        <div class="rj-ingredients-list">
+                            <div class="rj-ing-item" data-target="tomato">🍅 Tomato</div>
+                            <div class="rj-ing-item" data-target="capsicum">🫑 Capsicum</div>
+                            <div class="rj-ing-item" data-target="onion">🧅 Onion</div>
+                            <div class="rj-ing-item" data-target="broccoli">🥦 Broccoli</div>
+                            <div class="rj-ing-item" data-target="pasta">🍝 Penne Pasta</div>
+                        </div>
+                    </div>
+
+                    <a href="404page.html" class="rj-btn">View Recipe <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="rj-image-col">
+                    <div class="rj-image-box">
+                        <img src="./asset/w32.webp" alt="Creamy Vegetable Pasta">
+                        <div class="rj-image-overlay"></div>
+
+
+                        <div class="rj-pointer pointer-tomato">
+                            <div class="rj-dot"></div> <span>Fresh Tomatoes</span>
+                        </div>
+                        <div class="rj-pointer pointer-capsicum">
+                            <div class="rj-dot"></div> <span>Crisp Capsicum</span>
+                        </div>
+                        <div class="rj-pointer pointer-onion">
+                            <div class="rj-dot"></div> <span>Organic Onions</span>
+                        </div>
+                        <div class="rj-pointer pointer-broccoli">
+                            <div class="rj-dot"></div> <span>Green Broccoli</span>
+                        </div>
+                        <div class="rj-pointer pointer-pasta">
+                            <div class="rj-dot"></div> <span>Premium Pasta</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="smart-tips-section" id="smart-tips">
+
+        <div class="st-header">
+            <h2 class="st-gradient-heading">Smart Grocery Tips</h2>
+            <p class="st-subheading">Master your kitchen with our expert advice on shopping, storing, and sustainable
+                living.</p>
+        </div>
+
+        <div class="st-container">
+
+
+            <div class="st-left-col">
+                <div class="st-accordion">
+
+
+                    <div class="st-item active" data-img="./asset/q7.webp">
+                        <div class="st-item-header">
+                            <div class="st-title-wrapper">
+                                <span class="st-num">01</span>
+                                <h3>Save More While Shopping</h3>
+                            </div>
+                            <div class="st-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="st-item-content">
+                            <div class="st-content-inner">
+                                <img src="./asset/q7.webp" class="st-mobile-img" alt="Shopping">
+                                <p>Discover simple, effective ways to control your grocery budget. Plan your meals
+                                    ahead, buy in bulk for essentials, and always stick to your digital shopping list to
+                                    avoid impulsive purchases.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="st-item" data-img="./asset/w21.webp">
+                        <div class="st-item-header">
+                            <div class="st-title-wrapper">
+                                <span class="st-num">02</span>
+                                <h3>Store Fruits Correctly</h3>
+                            </div>
+                            <div class="st-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="st-item-content">
+                            <div class="st-content-inner">
+                                <img src="./asset/w21.webp" class="st-mobile-img" alt="Fruits">
+                                <p>Keep your fresh produce crisp for longer. Learn which fruits belong in the fridge and
+                                    which should stay on the counter. Never store bananas next to apples to prevent
+                                    over-ripening.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="st-item" data-img="./asset/w23.webp">
+                        <div class="st-item-header">
+                            <div class="st-title-wrapper">
+                                <span class="st-num">03</span>
+                                <h3>Organize Your Pantry</h3>
+                            </div>
+                            <div class="st-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="st-item-content">
+                            <div class="st-content-inner">
+                                <img src="./asset/w23.webp" class="st-mobile-img" alt="Pantry">
+                                <p>Make everyday cooking easier by grouping items by category. Use clear, airtight
+                                    containers for grains and spices. Keep your most-used ingredients at eye level for
+                                    quick access.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="st-item" data-img="./asset/e3.webp">
+                        <div class="st-item-header">
+                            <div class="st-title-wrapper">
+                                <span class="st-num">04</span>
+                                <h3>Reduce Food Waste</h3>
+                            </div>
+                            <div class="st-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="st-item-content">
+                            <div class="st-content-inner">
+                                <img src="./asset/e3.webp" class="st-mobile-img" alt="Food Waste">
+                                <p>Use what you already have before buying more. Turn vegetable scraps into homemade
+                                    broth, freeze overripe fruits for smoothies, and embrace the "First In, First Out"
+                                    storage method.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="st-item" data-img="./asset/w11.webp">
+                        <div class="st-item-header">
+                            <div class="st-title-wrapper">
+                                <span class="st-num">05</span>
+                                <h3>Build a Balanced Basket</h3>
+                            </div>
+                            <div class="st-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="st-item-content">
+                            <div class="st-content-inner">
+                                <img src="./asset/w11.webp" class="st-mobile-img" alt="Balanced Basket">
+                                <p>Choose a better mix of daily essentials. Aim for a colorful variety of seasonal
+                                    vegetables, lean proteins, and whole grains to ensure your family gets complete
+                                    nutritional benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="st-right-col">
+                <div class="st-image-wrapper">
+                    <img src="./asset/w20.webp" id="st-dynamic-img" alt="Smart Tips">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="contributors-section" id="contributors">
+
+        <div class="fc-header">
+            <h2 class="fc-gradient-heading">Meet Our Food Contributors</h2>
+            <p class="fc-subheading">The passionate culinary experts, chefs, and nutritionists behind our fresh
+                editorial stories.</p>
+        </div>
+
+        <div class="fc-container">
+            <div class="fc-slider">
+
+
+                <div class="fc-card active" style="background-image: url('./asset/w35.webp');">
+                    <div class="fc-overlay"></div>
+                    <div class="fc-content">
+                        <div class="fc-info">
+                            <h3>Ananya Rao</h3>
+                            <span class="fc-role">Nutrition & Healthy Living</span>
+                        </div>
+                        <div class="fc-article">
+                            <span class="fc-article-tag"><i class="fa-solid fa-pen-nib"></i> Latest Article</span>
+                            <h4>The Ultimate Guide to Plant-Based Proteins</h4>
+                            <a href="404page.html" class="fc-read-btn">Read Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="fc-card" style="background-image: url('./asset/a23.webp');">
+                    <div class="fc-overlay"></div>
+                    <div class="fc-content">
+                        <div class="fc-info">
+                            <h3>Rahul Menon</h3>
+                            <span class="fc-role">Home Cooking</span>
+                        </div>
+                        <div class="fc-article">
+                            <span class="fc-article-tag"><i class="fa-solid fa-pen-nib"></i> Latest Article</span>
+                            <h4>Mastering the Perfect Weekend Brunch</h4>
+                            <a href="404page.html" class="fc-read-btn">Read Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="fc-card" style="background-image: url('./asset/w34.webp');">
+                    <div class="fc-overlay"></div>
+                    <div class="fc-content">
+                        <div class="fc-info">
+                            <h3>Meera Shah</h3>
+                            <span class="fc-role">Food & Lifestyle</span>
+                        </div>
+                        <div class="fc-article">
+                            <span class="fc-article-tag"><i class="fa-solid fa-pen-nib"></i> Latest Article</span>
+                            <h4>Aesthetic Dinners: Plating Like a Pro</h4>
+                            <a href="404page.html" class="fc-read-btn">Read Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="fc-card" style="background-image: url('./asset/w33.webp');">
+                    <div class="fc-overlay"></div>
+                    <div class="fc-content">
+                        <div class="fc-info">
+                            <h3>Arjun Das</h3>
+                            <span class="fc-role">Kitchen & Grocery Tips</span>
+                        </div>
+                        <div class="fc-article">
+                            <span class="fc-article-tag"><i class="fa-solid fa-pen-nib"></i> Latest Article</span>
+                            <h4>How to Pick the Best Produce at the Market</h4>
+                            <a href="404page.html" class="fc-read-btn">Read Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="blog-final-cta" id="blog-cta">
+
+
+        <div class="bfc-bg-wrapper">
+            <div class="bfc-bg-img" style="background-image: url('./asset/e2.webp');"></div>
+            <div class="bfc-overlay"></div>
+        </div>
+
+
+        <div class="bfc-content">
+            <h2 class="bfc-heading">Read It. Try It.<br><span>Shop It.</span></h2>
+            <p class="bfc-desc">Discover useful grocery tips, recipes and fresh ideas — then find everything you need in
+                one place.</p>
+
+            <div class="bfc-btn-group">
+                <a href="404page.html" class="bfc-btn-primary">Shop Fresh Groceries <i
+                        class="fa-solid fa-cart-shopping"></i></a>
+                <a href="404page.html" class="bfc-btn-secondary">Explore More Stories <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+
+        <div class="bfc-marquee">
+            <div class="bfc-marquee-track">
+                <span><i class="fa-solid fa-seedling"></i> Recipes</span>
+                <span><i class="fa-solid fa-heart-pulse"></i> Healthy Living</span>
+                <span><i class="fa-solid fa-lightbulb"></i> Grocery Tips</span>
+                <span><i class="fa-solid fa-basket-shopping"></i> Seasonal Picks</span>
+                <span><i class="fa-solid fa-kitchen-set"></i> Kitchen Ideas</span>
+                <span><i class="fa-solid fa-apple-whole"></i> Fresh Food</span>
+
+
+                <span><i class="fa-solid fa-seedling"></i> Recipes</span>
+                <span><i class="fa-solid fa-heart-pulse"></i> Healthy Living</span>
+                <span><i class="fa-solid fa-lightbulb"></i> Grocery Tips</span>
+                <span><i class="fa-solid fa-basket-shopping"></i> Seasonal Picks</span>
+                <span><i class="fa-solid fa-kitchen-set"></i> Kitchen Ideas</span>
+                <span><i class="fa-solid fa-apple-whole"></i> Fresh Food</span>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html" class="footer-logo"><img src="./asset/s1.webp" alt="logo"></a>
+
+
+                <div class="footer-search">
+                    <h4>Search & Order</h4>
+                    <div class="search-box">
+                        <input type="text" id="footer-search-input" placeholder="Type an item to order...">
+                        <button id="footer-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div id="footer-message" class="footer-message"></div>
+                </div>
+
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="blog.html">Latest Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="404page.html">Fresh Vegetables</a></li>
+                    <li><a href="404page.html">Organic Fruits</a></li>
+                    <li><a href="404page.html">Dairy & Eggs</a></li>
+                    <li><a href="404page.html">Beverages & Snacks</a></li>
+                    <li><a href="404page.html">Daily Essentials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 7:00 AM – 10:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 FreshMart Grocery. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        const bhBgSlides = document.querySelectorAll('.bh-bg-slide');
+        const bhContentSlides = document.querySelectorAll('.bh-content-slide');
+        const bhImageSlides = document.querySelectorAll('.bh-image-slide');
+        let bhSlideIndex = 0;
+
+        if (bhBgSlides.length > 0 && bhContentSlides.length > 0 && bhImageSlides.length > 0) {
+            setInterval(() => {
+
+                bhBgSlides[bhSlideIndex].classList.remove('active');
+                bhContentSlides[bhSlideIndex].classList.remove('active');
+                bhImageSlides[bhSlideIndex].classList.remove('active');
+
+
+                bhSlideIndex = (bhSlideIndex + 1) % bhBgSlides.length;
+
+
+                bhBgSlides[bhSlideIndex].classList.add('active');
+                bhContentSlides[bhSlideIndex].classList.add('active');
+                bhImageSlides[bhSlideIndex].classList.add('active');
+            }, 5000);
+        }
+
+
+        if (typeof gsap !== 'undefined') {
+            const bhHero = document.querySelector(".blog-hero-section");
+
+            if (bhHero) {
+                gsap.fromTo(".bh-left-col",
+                    { x: -100, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
+                );
+
+                gsap.fromTo(".bh-image-slider",
+                    { x: 100, scale: 0.9, opacity: 0 },
+                    { x: 0, scale: 1, opacity: 1, duration: 1.2, ease: "power3.out" }
+                );
+
+                gsap.fromTo(".bh-tag",
+                    { scale: 0, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 1, stagger: 0.2, delay: 0.8, ease: "back.out(1.5)" }
+                );
+            }
+        }
+
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const fsSection = document.querySelector(".featured-story-section");
+
+            if (fsSection) {
+
+
+                gsap.fromTo(".fs-header",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: fsSection, start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".fs-main-article",
+                    { y: 100, opacity: 0, scale: 0.95 },
+                    {
+                        y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power3.out",
+                        scrollTrigger: { trigger: ".fs-grid-layout", start: "top 80%" }
+                    }
+                );
+
+
+                gsap.fromTo(".fs-side-card",
+                    { x: 100, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out",
+                        scrollTrigger: { trigger: ".fs-grid-layout", start: "top 75%" }
+                    }
+                );
+            }
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const fmSection = document.querySelector(".fresh-market-section");
+            const fmTrack = document.querySelector(".fm-track");
+
+            if (fmSection && fmTrack) {
+
+
+                gsap.fromTo(".fm-header-wrapper",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: fmSection, start: "top 80%" }
+                    }
+                );
+
+
+                let mm = gsap.matchMedia();
+
+                mm.add("(min-width: 768px)", () => {
+
+
+                    let moveDistance = -(fmTrack.scrollWidth - window.innerWidth + 60);
+
+                    gsap.to(fmTrack, {
+                        x: moveDistance,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: fmSection,
+                            start: "center center",
+                            end: () => "+=" + (fmTrack.scrollWidth / 1.5),
+                            pin: true,        
+                            scrub: 1,         
+                            invalidateOnRefresh: true
+                        }
+                    });
+                });
+            }
+        }
+
+
+
+
+        const ingItems = document.querySelectorAll('.rj-ing-item');
+        const imageBox = document.querySelector('.rj-image-box');
+        const pointers = document.querySelectorAll('.rj-pointer');
+
+        if (ingItems.length > 0 && imageBox) {
+
+
+            function clearAll() {
+                ingItems.forEach(i => i.classList.remove('active'));
+                pointers.forEach(p => p.classList.remove('active'));
+                imageBox.classList.remove('zoomed');
+            }
+
+            ingItems.forEach(item => {
+
+
+                item.addEventListener('mouseenter', () => {
+                    if (window.innerWidth > 767) {
+                        clearAll();
+                        const target = item.getAttribute('data-target');
+                        item.classList.add('active');
+                        imageBox.classList.add('zoomed');
+                        const targetPointer = document.querySelector(`.pointer-${target}`);
+                        if (targetPointer) targetPointer.classList.add('active');
+                    }
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    if (window.innerWidth > 767) {
+                        clearAll();
+                    }
+                });
+
+
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 767) {
+                        e.preventDefault(); 
+                        const target = item.getAttribute('data-target');
+                        const targetPointer = document.querySelector(`.pointer-${target}`);
+
+
+                        if (item.classList.contains('active')) {
+                            clearAll();
+                        } else {
+
+                            clearAll();
+                            item.classList.add('active');
+                            imageBox.classList.add('zoomed');
+                            if (targetPointer) targetPointer.classList.add('active');
+                        }
+                    }
+                });
+            });
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            const rjSection = document.querySelector(".recipe-journey-section");
+
+            if (rjSection) {
+                gsap.fromTo(".rj-header",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: rjSection, start: "top 85%" }
+                    }
+                );
+
+                gsap.fromTo(".rj-card",
+                    { y: 80, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1.2, ease: "power3.out",
+                        scrollTrigger: { trigger: ".rj-container", start: "top 80%" }
+                    }
+                );
+
+                gsap.fromTo(".rj-ing-item",
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "back.out(1.5)",
+                        scrollTrigger: { trigger: ".rj-ingredients-list", start: "top 90%" }
+                    }
+                );
+            }
+        }
+
+
+
+
+
+        const stItems = document.querySelectorAll('.st-item');
+        const stDynamicImg = document.getElementById('st-dynamic-img');
+
+        if (stItems.length > 0) {
+            stItems.forEach(item => {
+                const header = item.querySelector('.st-item-header');
+
+                header.addEventListener('click', () => {
+
+                    if (item.classList.contains('active')) return;
+
+
+                    stItems.forEach(i => i.classList.remove('active'));
+
+
+                    item.classList.add('active');
+
+
+                    if (stDynamicImg && window.innerWidth > 1024) {
+                        const newImgSrc = item.getAttribute('data-img');
+
+                        stDynamicImg.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            stDynamicImg.src = newImgSrc;
+                            stDynamicImg.classList.remove('fade-out');
+                        }, 300); 
+                    }
+                });
+            });
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            const stSection = document.querySelector(".smart-tips-section");
+
+            if (stSection) {
+
+                gsap.fromTo(".st-header",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: stSection, start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".st-item",
+                    { x: -50, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: { trigger: ".st-left-col", start: "top 80%" }
+                    }
+                );
+
+
+                gsap.fromTo(".st-right-col",
+                    { x: 50, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: ".st-container", start: "top 80%" }
+                    }
+                );
+            }
+        }
+
+
+
+
+        const fcCards = document.querySelectorAll('.fc-card');
+
+        if (fcCards.length > 0) {
+            fcCards.forEach(card => {
+
+                card.addEventListener('mouseenter', () => {
+                    if (window.innerWidth > 991) {
+                        fcCards.forEach(c => c.classList.remove('active'));
+                        card.classList.add('active');
+                    }
+                });
+
+
+                card.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 991) {
+
+                        if (!card.classList.contains('active')) {
+                            fcCards.forEach(c => c.classList.remove('active'));
+                            card.classList.add('active');
+                        }
+                    }
+                });
+            });
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            const fcSection = document.querySelector(".contributors-section");
+
+            if (fcSection) {
+
+                gsap.fromTo(".fc-header",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: fcSection, start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".fc-card",
+                    { y: 80, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: { trigger: ".fc-slider", start: "top 80%" }
+                    }
+                );
+            }
+        }
+
+
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const bfcSection = document.querySelector(".blog-final-cta");
+
+            if (bfcSection) {
+
+
+                gsap.to(".bfc-bg-img", {
+                    y: "20%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: bfcSection,
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+
+
+                gsap.fromTo([".bfc-heading", ".bfc-desc", ".bfc-btn-group a"],
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: { trigger: ".bfc-content", start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".bfc-marquee",
+                    { y: 100, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: bfcSection, start: "top 85%" }
+                    }
+                );
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

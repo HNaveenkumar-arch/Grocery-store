@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Grocery Store</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-bg"></div>
+        <div class="glass-card">
+            <div class="premium-spinner"></div>
+            <div class="loader-text">Preparing Fresh Groceries...</div>
+        </div>
+    </div>
+
+    <div class="top-bar" id="top-bar">
+        <div class="moving-text">
+            <span> Special Offer: Get 20% Off on Fresh Organic Vegetables! Use Code: FRESH20 | Free Delivery on orders
+                above $50! </span>
+        </div>
+        <div class="close-btn-bg">
+            <span class="close-btn" id="close-top-bar">&times;</span>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-mobile-header">
+                <a href="index.html" class="logo"><img src="./asset/s1.webp" alt="logo"></a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item mobile-auth">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="signup.html" class="btn btn-signup">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-auth" data-aos="fade-left" data-aos-delay="700">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="premium-hero" id="premium-hero">
+
+        <div class="hero-bg-slide active" style="background-image: url('./asset/w1.webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+
+                <div class="hero-text-content">
+                    <span class="premium-badge"><i class="fa-solid fa-leaf"></i> 100% Organic • Farm Fresh</span>
+                    <h1 class="hero-heading">Fresh Vegetables.<br><span>Direct to Home.</span></h1>
+                    <p class="hero-paragraph">Experience the crispiness of farm-fresh vegetables delivered directly to
+                        your kitchen. Healthy living starts here with our premium daily picks.</p>
+                    <div class="hero-actions">
+                        <a href="404page.html" class="btn-main">Explore Veggies</a>
+                    </div>
+                </div>
+
+                <div class="hero-promo-card">
+                    <div class="glass-promo-box">
+                        <div class="promo-badge">Limited Time Offer</div>
+                        <div class="promo-image-circle">
+                            <img src="./asset/w2.webp" alt="Vegetable Basket">
+                        </div>
+                        <div class="promo-details">
+                            <h3>Family Veggie Combo</h3>
+                            <ul class="promo-features">
+                                <li><i class="fa-solid fa-check"></i> 5kg Assorted Vegetables</li>
+                                <li><i class="fa-solid fa-check"></i> Free Organic Coriander</li>
+                                <li><i class="fa-solid fa-check"></i> Same Day Delivery</li>
+                            </ul>
+                            <div class="promo-price-action">
+                                <div class="price-block">
+                                    <span class="new-price">$14.99</span>
+                                    <span class="old-price">$25.00</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="claim-btn">Claim
+                                    Offer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-bg-slide" style="background-image: url('./asset/w3.webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+
+                <div class="hero-text-content">
+                    <span class="premium-badge"><i class="fa-solid fa-star"></i> Premium Quality • Handpicked</span>
+                    <h1 class="hero-heading">Juicy Fruits.<br><span>Taste the Nature.</span></h1>
+                    <p class="hero-paragraph">Refresh your day with our handpicked, naturally ripened fruits. Packed
+                        with vitamins, freshness, and pure sweetness for your family.</p>
+                    <div class="hero-actions">
+                        <a href="404page.html" class="btn-main">Shop Fresh Fruits</a>
+                    </div>
+                </div>
+
+                <div class="hero-promo-card">
+                    <div class="glass-promo-box">
+                        <div class="promo-badge flash-badge">Flash Sale</div>
+                        <div class="promo-image-circle">
+                            <img src="./asset/q24.webp" alt="Fruit Basket">
+                        </div>
+                        <div class="promo-details">
+                            <h3>Tropical Fruit Basket</h3>
+                            <ul class="promo-features">
+                                <li><i class="fa-solid fa-check"></i> 100% Naturally Ripened</li>
+                                <li><i class="fa-solid fa-check"></i> Rich in Vitamins</li>
+                                <li><i class="fa-solid fa-check"></i> Zero Chemicals Used</li>
+                            </ul>
+                            <div class="promo-price-action">
+                                <div class="price-block">
+                                    <span class="new-price">$19.99</span>
+                                    <span class="old-price">$30.00</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="claim-btn">Claim
+                                    Offer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-ticker-wrapper">
+            <div class="hero-ticker-track">
+                <span><i class="fa-solid fa-fire"></i> Mega Sale: Flat 50% Off on Organic Veggies!</span>
+                <span><i class="fa-solid fa-truck-fast"></i> Free Delivery on Orders Over $30</span>
+                <span><i class="fa-solid fa-gift"></i> Get a Free Gift with Your First Order!</span>
+                <span><i class="fa-solid fa-star"></i> Rated #1 Grocery Store in the City</span>
+                <span><i class="fa-solid fa-fire"></i> Mega Sale: Flat 50% Off on Organic Veggies!</span>
+                <span><i class="fa-solid fa-truck-fast"></i> Free Delivery on Orders Over $30</span>
+                <span><i class="fa-solid fa-gift"></i> Get a Free Gift with Your First Order!</span>
+                <span><i class="fa-solid fa-star"></i> Rated #1 Grocery Store in the City</span>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="category-section" id="categories">
+        <div class="category-header" data-aos="fade-up">
+            <h2 class="gradient-heading">Shop by Category</h2>
+            <p class="category-subheading">Explore our wide range of premium everyday essentials curated just for you
+            </p>
+        </div>
+
+        <div class="category-slider-container">
+            <div class="category-slider-track">
+
+                <div class="cat-card">
+                    <img src="./asset/q21.webp" alt="Vegetables">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">150+ Items</span>
+                        <h3><i class="fa-solid fa-carrot"></i> Vegetables</h3>
+                        <p class="cat-desc">Daily farm fresh picks</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w4.webp" alt="Fruits">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">80+ Items</span>
+                        <h3><i class="fa-solid fa-apple-whole"></i> Fruits</h3>
+                        <p class="cat-desc">Organic and naturally sweet</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w5.webp" alt="Dairy & Eggs">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">50+ Items</span>
+                        <h3><i class="fa-solid fa-egg"></i> Dairy & Eggs</h3>
+                        <p class="cat-desc">Fresh from local farms</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w6.webp" alt="Bakery">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">40+ Items</span>
+                        <h3><i class="fa-solid fa-bread-slice"></i> Bakery</h3>
+                        <p class="cat-desc">Freshly baked everyday</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w7.webp" alt="Rice & Grains">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">90+ Items</span>
+                        <h3><i class="fa-solid fa-bowl-rice"></i> Rice & Grains</h3>
+                        <p class="cat-desc">Premium quality staples</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/q1.webp" alt="Pantry">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">200+ Items</span>
+                        <h3><i class="fa-solid fa-jar"></i> Pantry</h3>
+                        <p class="cat-desc">All your kitchen essentials</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w8.webp" alt="Beverages">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">70+ Items</span>
+                        <h3><i class="fa-solid fa-mug-hot"></i> Beverages</h3>
+                        <p class="cat-desc">Refreshing and healthy</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/q4.webp" alt="Household">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">120+ Items</span>
+                        <h3><i class="fa-solid fa-pump-soap"></i> Household</h3>
+                        <p class="cat-desc">Cleaning & home basics</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/q21.webp" alt="Vegetables">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">150+ Items</span>
+                        <h3><i class="fa-solid fa-carrot"></i> Vegetables</h3>
+                        <p class="cat-desc">Daily farm fresh picks</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w4.webp" alt="Fruits">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">80+ Items</span>
+                        <h3><i class="fa-solid fa-apple-whole"></i> Fruits</h3>
+                        <p class="cat-desc">Organic and naturally sweet</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w5.webp" alt="Dairy & Eggs">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">50+ Items</span>
+                        <h3><i class="fa-solid fa-egg"></i> Dairy & Eggs</h3>
+                        <p class="cat-desc">Fresh from local farms</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w6.webp" alt="Bakery">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">40+ Items</span>
+                        <h3><i class="fa-solid fa-bread-slice"></i> Bakery</h3>
+                        <p class="cat-desc">Freshly baked everyday</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w7.webp" alt="Rice & Grains">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">90+ Items</span>
+                        <h3><i class="fa-solid fa-bowl-rice"></i> Rice & Grains</h3>
+                        <p class="cat-desc">Premium quality staples</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/q1.webp" alt="Pantry">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">200+ Items</span>
+                        <h3><i class="fa-solid fa-jar"></i> Pantry</h3>
+                        <p class="cat-desc">All your kitchen essentials</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/w8.webp" alt="Beverages">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">70+ Items</span>
+                        <h3><i class="fa-solid fa-mug-hot"></i> Beverages</h3>
+                        <p class="cat-desc">Refreshing and healthy</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="cat-card">
+                    <img src="./asset/q4.webp" alt="Household">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-content">
+                        <span class="item-count">120+ Items</span>
+                        <h3><i class="fa-solid fa-pump-soap"></i> Household</h3>
+                        <p class="cat-desc">Cleaning & home basics</p>
+                        <a href="404page.html" class="cat-shop-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="category-footer" data-aos="fade-up">
+            <a href="404page.html" class="btn-outline-green">View All Categories <i
+                    class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </section>
+
+
+    <section class="fresh-picks-section" id="fresh-picks">
+        <div class="fp-header">
+            <h2 class="fp-heading">Today's Fresh Picks</h2>
+            <p class="fp-subheading">Handpicked organic goodness for your healthy lifestyle</p>
+        </div>
+
+        <div class="fp-container">
+
+            <div class="fp-featured-col">
+                <div class="fp-featured-card">
+                    <div class="fp-featured-badge">Deal of the Day</div>
+                    <div class="fp-featured-image">
+                        <img src="./asset/q22.webp" alt="Organic Green Vegetables">
+                    </div>
+                    <div class="fp-featured-content">
+                        <div class="fp-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(120+ Reviews)</span>
+                        </div>
+                        <h3 class="fp-featured-title">Organic Green Vegetables</h3>
+                        <p class="fp-featured-desc">A premium basket of farm-fresh, pesticide-free green vegetables
+                            directly from local farmers to ensure maximum nutrition and taste for your family.</p>
+                        <div class="fp-tags">
+                            <span><i class="fa-solid fa-leaf"></i> 100% Organic</span>
+                            <span><i class="fa-solid fa-truck-fast"></i> Fresh Harvest</span>
+                        </div>
+                        <div class="fp-action-row">
+                            <div class="fp-price-box">
+                                <span class="fp-price">₹149</span>
+                                <span class="fp-weight">/ 500g</span>
+                            </div>
+                            <button onclick="window.location.href='404page.html'" class="fp-btn-main">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fp-grid-col">
+                <div class="fp-product-track">
+
+                    <div class="fp-item-card">
+                        <span class="fp-discount">20% OFF</span>
+                        <div class="fp-item-img">
+                            <img src="./asset/w9.webp" alt="Tomato">
+                        </div>
+                        <div class="fp-item-details">
+                            <span class="fp-item-weight">1 kg</span>
+                            <h4>Fresh Red Tomato</h4>
+                            <div class="fp-item-bottom">
+                                <div class="fp-item-price">
+                                    <span class="current">₹45</span>
+                                    <span class="old">₹55</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="fp-quick-add"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-item-card">
+                        <span class="fp-discount">15% OFF</span>
+                        <div class="fp-item-img">
+                            <img src="./asset/w2.webp" alt="Carrot">
+                        </div>
+                        <div class="fp-item-details">
+                            <span class="fp-item-weight">500 g</span>
+                            <h4>Crunchy Carrot</h4>
+                            <div class="fp-item-bottom">
+                                <div class="fp-item-price">
+                                    <span class="current">₹60</span>
+                                    <span class="old">₹70</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="fp-quick-add"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-item-card">
+                        <span class="fp-discount">10% OFF</span>
+                        <div class="fp-item-img">
+                            <img src="./asset/w10.webp" alt="Broccoli">
+                        </div>
+                        <div class="fp-item-details">
+                            <span class="fp-item-weight">1 pc</span>
+                            <h4>Organic Broccoli</h4>
+                            <div class="fp-item-bottom">
+                                <div class="fp-item-price">
+                                    <span class="current">₹120</span>
+                                    <span class="old">₹135</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="fp-quick-add"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-item-card">
+                        <span class="fp-discount">25% OFF</span>
+                        <div class="fp-item-img">
+                            <img src="./asset/w11.webp" alt="Spinach">
+                        </div>
+                        <div class="fp-item-details">
+                            <span class="fp-item-weight">1 bunch</span>
+                            <h4>Fresh Spinach</h4>
+                            <div class="fp-item-bottom">
+                                <div class="fp-item-price">
+                                    <span class="current">₹30</span>
+                                    <span class="old">₹40</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="fp-quick-add"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-item-card">
+                        <span class="fp-discount">12% OFF</span>
+                        <div class="fp-item-img">
+                            <img src="./asset/w12.webp" alt="Capsicum">
+                        </div>
+                        <div class="fp-item-details">
+                            <span class="fp-item-weight">500 g</span>
+                            <h4>Green Capsicum</h4>
+                            <div class="fp-item-bottom">
+                                <div class="fp-item-price">
+                                    <span class="current">₹75</span>
+                                    <span class="old">₹85</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="fp-quick-add"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fp-item-card">
+                        <span class="fp-discount">5% OFF</span>
+                        <div class="fp-item-img">
+                            <img src="./asset/w13.webp" alt="Onion">
+                        </div>
+                        <div class="fp-item-details">
+                            <span class="fp-item-weight">1 kg</span>
+                            <h4>Organic Onion</h4>
+                            <div class="fp-item-bottom">
+                                <div class="fp-item-price">
+                                    <span class="current">₹50</span>
+                                    <span class="old">₹55</span>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="fp-quick-add"><i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="deals-section" id="deals">
+        <div class="deals-header">
+            <h2 class="deals-gradient-heading">Deals That Fill Your Basket</h2>
+            <p class="deals-subheading">Grab our exclusive premium offers and make your everyday grocery shopping more
+                rewarding.</p>
+        </div>
+
+        <div class="deals-grid">
+
+            <div class="deal-card deal-large">
+                <div class="deal-bg" style="background-image: url('./asset/w14.webp');"></div>
+                <div class="deal-overlay"></div>
+
+                <div class="deal-hover-card">
+                    <span class="deal-number">01</span>
+                    <div class="deal-text">
+                        <h3>Fresh Fruits</h3>
+                        <p class="deal-highlight">Up to 30% OFF</p>
+                    </div>
+                    <a href="404page.html" class="deal-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="deal-card deal-small-top">
+                <div class="deal-bg" style="background-image: url('./asset/q11.webp');"></div>
+                <div class="deal-overlay"></div>
+
+                <div class="deal-hover-card">
+                    <span class="deal-number">02</span>
+                    <div class="deal-text">
+                        <h3>Pantry Essentials</h3>
+                        <p class="deal-highlight">Save More • Stock More</p>
+                    </div>
+                    <a href="404page.html" class="deal-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="deal-card deal-small-bottom">
+                <div class="deal-bg" style="background-image: url('./asset/q24.webp');"></div>
+                <div class="deal-overlay"></div>
+
+                <div class="deal-hover-card">
+                    <span class="deal-number">03</span>
+                    <div class="deal-text">
+                        <h3>Weekend Grocery Sale</h3>
+                        <p class="deal-highlight">BUY MORE, SAVE MORE</p>
+                    </div>
+                    <a href="404page.html" class="deal-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="farm-table-section" id="farm-table">
+        <div class="ft-header">
+            <h2 class="ft-gradient-heading">From Farm to Your Table</h2>
+            <p class="ft-subheading">Discover the journey of your groceries, ensuring ultimate freshness every step of
+                the way.</p>
+        </div>
+
+        <div class="ft-container">
+
+            <div class="ft-image-col">
+                <div class="ft-sticky-wrapper">
+                    <div class="ft-image-box">
+                        <img src="./asset/q13.webp" alt="Farm to Table">
+                        <div class="ft-glass-badge">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>100% Transparent Process</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft-timeline-col">
+                <div class="ft-timeline-track">
+                    <div class="ft-timeline-progress"></div>
+                </div>
+
+                <div class="ft-step">
+                    <div class="ft-step-indicator">
+                        <div class="ft-dot"></div>
+                    </div>
+                    <div class="ft-step-card">
+                        <span class="ft-step-number">01</span>
+                        <div class="ft-step-content">
+                            <h3><i class="fa-solid fa-seedling"></i> Farm Sourced</h3>
+                            <p>Fresh produce sourced directly from trusted, organic farms with sustainable and healthy
+                                agricultural practices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ft-step">
+                    <div class="ft-step-indicator">
+                        <div class="ft-dot"></div>
+                    </div>
+                    <div class="ft-step-card">
+                        <span class="ft-step-number">02</span>
+                        <div class="ft-step-content">
+                            <h3><i class="fa-solid fa-box-open"></i> Quality & Packed</h3>
+                            <p>Rigorously inspected for freshness and carefully packed using premium eco-friendly
+                                materials to retain natural moisture.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ft-step">
+                    <div class="ft-step-indicator">
+                        <div class="ft-dot"></div>
+                    </div>
+                    <div class="ft-step-card">
+                        <span class="ft-step-number">03</span>
+                        <div class="ft-step-content">
+                            <h3><i class="fa-solid fa-truck-fast"></i> Delivered Fresh</h3>
+                            <p>Your premium groceries reach your doorstep fast, fresh, and completely ready to be cooked
+                                for your family.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="why-choose-section" id="why-choose">
+        <div class="wc-header">
+            <h2 class="wc-gradient-heading">Why Choose FreshMart?</h2>
+            <p class="wc-subheading">Experience the best quality groceries with our dedicated premium services tailored
+                for you.</p>
+        </div>
+
+        <div class="wc-container">
+            <div class="wc-interactive-box">
+
+                <div class="wc-bg-layer">
+                    <img src="./asset/w15.webp" class="wc-bg-img active" alt="Fresh Products">
+                    <img src="./asset/w16.webp" class="wc-bg-img" alt="Fast Delivery">
+                    <img src="./asset/w17.webp" class="wc-bg-img" alt="Quality Guarantee">
+                    <img src="./asset/w18.webp" class="wc-bg-img" alt="Easy Returns">
+                    <img src="./asset/w19.webp" class="wc-bg-img" alt="Secure Payments">
+                    <div class="wc-dark-overlay"></div>
+                </div>
+
+                <div class="wc-features-strip">
+
+                    <div class="wc-card active">
+                        <div class="wc-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>100% Fresh Products</h3>
+                        <p>Selected every day</p>
+                    </div>
+
+                    <div class="wc-card">
+                        <div class="wc-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h3>Fast Delivery</h3>
+                        <p>Delivered at your preferred time</p>
+                    </div>
+
+                    <div class="wc-card">
+                        <div class="wc-icon"><i class="fa-solid fa-medal"></i></div>
+                        <h3>Quality Guarantee</h3>
+                        <p>Freshness you can trust</p>
+                    </div>
+
+                    <div class="wc-card">
+                        <div class="wc-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                        <h3>Easy Returns</h3>
+                        <p>Simple & hassle-free</p>
+                    </div>
+
+                    <div class="wc-card">
+                        <div class="wc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Secure Payments</h3>
+                        <p>Safe checkout experience</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="weekly-basket-section" id="weekly-basket">
+        <div class="wb-header">
+            <h2 class="wb-gradient-heading">Build Your Weekly Basket</h2>
+            <p class="wb-subheading">Customize your weekly essentials and get them delivered to your doorstep in one go.
+            </p>
+        </div>
+
+        <div class="wb-container">
+
+            <div class="wb-left-col">
+                <h3 class="wb-col-title">Your Weekly Essentials</h3>
+                <div class="wb-items-grid">
+
+                    <div class="wb-item selected" data-price="250">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                            <span>Premium Rice</span>
+                        </div>
+                        <div class="wb-item-price">₹250</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="wb-item selected" data-price="60">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-jug-detergent"></i>
+                            <span>Fresh Milk</span>
+                        </div>
+                        <div class="wb-item-price">₹60</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="wb-item selected" data-price="80">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-egg"></i>
+                            <span>Organic Eggs</span>
+                        </div>
+                        <div class="wb-item-price">₹80</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="wb-item selected" data-price="40">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-bread-slice"></i>
+                            <span>Whole Wheat Bread</span>
+                        </div>
+                        <div class="wb-item-price">₹40</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="wb-item selected" data-price="200">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-carrot"></i>
+                            <span>Mixed Vegetables</span>
+                        </div>
+                        <div class="wb-item-price">₹200</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="wb-item selected" data-price="300">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-apple-whole"></i>
+                            <span>Assorted Fruits</span>
+                        </div>
+                        <div class="wb-item-price">₹300</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="wb-item selected" data-price="150">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-bottle-droplet"></i>
+                            <span>Cooking Oil</span>
+                        </div>
+                        <div class="wb-item-price">₹150</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="wb-item selected" data-price="169">
+                        <div class="wb-item-info">
+                            <i class="fa-solid fa-cookie-bite"></i>
+                            <span>Evening Snacks</span>
+                        </div>
+                        <div class="wb-item-price">₹169</div>
+                        <div class="wb-check"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="wb-right-col">
+                <div class="wb-basket-visual">
+                    <img src="./asset/w17.webp" alt="Grocery Basket">
+                    <div class="wb-overlay"></div>
+
+                    <div class="wb-summary-card">
+                        <div class="wb-summary-details">
+                            <p class="wb-items-count"><span id="wb-count">8</span> Items Selected</p>
+                            <p class="wb-total-price">Estimated Total: <span id="wb-total">₹1,249</span></p>
+                        </div>
+                        <a href="404page.html" class="wb-build-btn">Build My Basket <i
+                                class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="testimonial-section" id="testimonials">
+        <div class="testi-header">
+            <h2 class="testi-gradient-heading">What Our Customers Say</h2>
+            <p class="testi-subheading">Don't just take our word for it. Hear from our happy and satisfied customers.
+            </p>
+        </div>
+
+        <div class="testi-slider-container">
+            <div class="testi-track">
+
+                <div class="testi-card">
+                    <div class="testi-product-thumb">
+                        <img src="./asset/a25.webp" alt="Vegetables">
+                    </div>
+                    <div class="testi-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="testi-text">"The vegetables always arrive fresh and perfectly packed. Highly
+                            recommended for daily needs!"</p>
+                        <div class="testi-author-info">
+                            <h4>Priya M.</h4>
+                            <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-product-thumb">
+                        <img src="./asset/a23.webp" alt="Pantry">
+                    </div>
+                    <div class="testi-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="testi-text">"I can order all my weekly essentials from one place. Saves me so much
+                            time and effort."</p>
+                        <div class="testi-author-info">
+                            <h4>Arun K.</h4>
+                            <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-product-thumb">
+                        <img src="./asset/a31.webp" alt="Fruits">
+                    </div>
+                    <div class="testi-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="testi-text">"Fast delivery and excellent product quality. The fruits are naturally
+                            sweet and organic."</p>
+                        <div class="testi-author-info">
+                            <h4>Meena R.</h4>
+                            <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-product-thumb">
+                        <img src="./asset/a25.webp" alt="Vegetables">
+                    </div>
+                    <div class="testi-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="testi-text">"The vegetables always arrive fresh and perfectly packed. Highly
+                            recommended for daily needs!"</p>
+                        <div class="testi-author-info">
+                            <h4>Priya M.</h4>
+                            <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-product-thumb">
+                        <img src="./asset/a23.webp" alt="Pantry">
+                    </div>
+                    <div class="testi-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="testi-text">"I can order all my weekly essentials from one place. Saves me so much
+                            time and effort."</p>
+                        <div class="testi-author-info">
+                            <h4>Arun K.</h4>
+                            <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-product-thumb">
+                        <img src="./asset/a31.webp" alt="Fruits">
+                    </div>
+                    <div class="testi-content">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="testi-text">"Fast delivery and excellent product quality. The fruits are naturally
+                            sweet and organic."</p>
+                        <div class="testi-author-info">
+                            <h4>Meena R.</h4>
+                            <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section" id="cta">
+        <div class="cta-bg-image"></div>
+        <div class="cta-overlay"></div>
+
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2 class="cta-heading">Everything Fresh.<br><span>Everything You Need.</span></h2>
+                <p class="cta-desc">Fill your kitchen with quality groceries delivered straight to your doorstep.
+                    Experience the best in freshness and taste.</p>
+                <div class="cta-buttons">
+                    <a href="404page.html" class="btn-cta-primary"><i class="fa-solid fa-cart-shopping"></i> Start
+                        Shopping</a>
+                    <a href="404page.html" class="btn-cta-secondary">View Offers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-bottom-ticker">
+            <div class="cta-ticker-track">
+                <span><i class="fa-solid fa-circle-small"></i> Fresh Fruits</span>
+                <span><i class="fa-solid fa-circle-small"></i> Organic Vegetables</span>
+                <span><i class="fa-solid fa-circle-small"></i> Dairy</span>
+                <span><i class="fa-solid fa-circle-small"></i> Bakery</span>
+                <span><i class="fa-solid fa-circle-small"></i> Pantry</span>
+                <span><i class="fa-solid fa-circle-small"></i> Beverages</span>
+                <span><i class="fa-solid fa-circle-small"></i> Household Essentials</span>
+
+                <span><i class="fa-solid fa-circle-small"></i> Fresh Fruits</span>
+                <span><i class="fa-solid fa-circle-small"></i> Organic Vegetables</span>
+                <span><i class="fa-solid fa-circle-small"></i> Dairy</span>
+                <span><i class="fa-solid fa-circle-small"></i> Bakery</span>
+                <span><i class="fa-solid fa-circle-small"></i> Pantry</span>
+                <span><i class="fa-solid fa-circle-small"></i> Beverages</span>
+                <span><i class="fa-solid fa-circle-small"></i> Household Essentials</span>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html" class="footer-logo"><img src="./asset/s1.webp" alt="logo"></a>
+
+
+                <div class="footer-search">
+                    <h4>Search & Order</h4>
+                    <div class="search-box">
+                        <input type="text" id="footer-search-input" placeholder="Type an item to order...">
+                        <button id="footer-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div id="footer-message" class="footer-message"></div>
+                </div>
+
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="blog.html">Latest Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="404page.html">Fresh Vegetables</a></li>
+                    <li><a href="404page.html">Organic Fruits</a></li>
+                    <li><a href="404page.html">Dairy & Eggs</a></li>
+                    <li><a href="404page.html">Beverages & Snacks</a></li>
+                    <li><a href="404page.html">Daily Essentials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 7:00 AM – 10:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 FreshMart Grocery. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const bgSlides = document.querySelectorAll('.hero-bg-slide');
+        let currentBgSlide = 0;
+        const bgSlideInterval = 5000;
+
+        function animateBgSlideIn(slide) {
+            const textContent = slide.querySelectorAll('.premium-badge, .hero-heading, .hero-paragraph, .hero-actions');
+            const promoCard = slide.querySelector('.glass-promo-box');
+
+            const tl = gsap.timeline();
+
+            tl.fromTo(textContent,
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power2.out' }
+            )
+                .fromTo(promoCard,
+                    { scale: 0.95, y: 30, opacity: 0 },
+                    { scale: 1, y: 0, opacity: 1, duration: 0.8, ease: 'back.out(1.2)' },
+                    "-=0.6"
+                );
+        }
+
+        function nextBgSlide() {
+            const previousSlide = currentBgSlide;
+            currentBgSlide = (currentBgSlide + 1) % bgSlides.length;
+
+            bgSlides[previousSlide].classList.remove('active');
+            bgSlides[currentBgSlide].classList.add('active');
+
+            animateBgSlideIn(bgSlides[currentBgSlide]);
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                animateBgSlideIn(bgSlides[currentBgSlide]);
+                setInterval(nextBgSlide, bgSlideInterval);
+            }, 2500);
+        });
+
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const fpHeader = document.querySelector('.fp-header');
+        const fpFeatured = document.querySelector('.fp-featured-col');
+        const fpCards = document.querySelectorAll('.fp-item-card');
+
+        gsap.fromTo(fpHeader,
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
+                scrollTrigger: { trigger: ".fresh-picks-section", start: "top 80%" }
+            }
+        );
+
+        gsap.fromTo(fpFeatured,
+            { x: -100, opacity: 0 },
+            {
+                x: 0, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".fp-container", start: "top 75%" }
+            }
+        );
+
+        gsap.fromTo(fpCards,
+            { x: 150, opacity: 0 },
+            {
+                x: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".fp-grid-col",
+                    start: "top 85%",
+                    scrub: 1
+                }
+            }
+        );
+
+
+        const dealsHeader = document.querySelector('.deals-header');
+        const dealCards = document.querySelectorAll('.deal-card');
+
+        gsap.fromTo(dealsHeader,
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".deals-section", start: "top 85%" }
+            }
+        );
+
+        dealCards.forEach((card, index) => {
+            gsap.fromTo(card,
+                { scale: 0.85, opacity: 0, y: 50 },
+                {
+                    scale: 1, opacity: 1, y: 0, duration: 1, ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    },
+                    delay: index * 0.2
+                }
+            );
+        });
+
+        const ftHeader = document.querySelector('.ft-header');
+        const ftImage = document.querySelector('.ft-image-box');
+        const ftSteps = document.querySelectorAll('.ft-step');
+        const ftProgress = document.querySelector('.ft-timeline-progress');
+
+        gsap.fromTo(ftHeader,
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
+                scrollTrigger: { trigger: ".farm-table-section", start: "top 80%" }
+            }
+        );
+
+        gsap.fromTo(ftImage,
+            { scale: 0.9, opacity: 0 },
+            {
+                scale: 1, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".ft-container", start: "top 75%" }
+            }
+        );
+
+        gsap.to(ftProgress, {
+            height: "100%",
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".ft-timeline-col",
+                start: "top 60%",
+                end: "bottom 80%",
+                scrub: 1
+            }
+        });
+
+        ftSteps.forEach((step) => {
+            ScrollTrigger.create({
+                trigger: step,
+                start: "top 75%",
+                onEnter: () => step.classList.add('active-step'),
+                onLeaveBack: () => step.classList.remove('active-step')
+            });
+        });
+
+
+        const wcHeader = document.querySelector('.wc-header');
+        const wcBox = document.querySelector('.wc-interactive-box');
+        const wcCards = document.querySelectorAll('.wc-card');
+        const wcBgs = document.querySelectorAll('.wc-bg-img');
+
+        gsap.fromTo(wcHeader,
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".why-choose-section", start: "top 85%" }
+            }
+        );
+
+        gsap.fromTo(wcBox,
+            { y: 80, opacity: 0, scale: 0.95 },
+            {
+                y: 0, opacity: 1, scale: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".wc-container", start: "top 80%" }
+            }
+        );
+
+        gsap.fromTo(wcCards,
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "back.out(1.2)",
+                scrollTrigger: { trigger: ".wc-interactive-box", start: "top 70%" }
+            }
+        );
+
+        wcCards.forEach((card, index) => {
+            card.addEventListener('mouseenter', () => {
+
+                wcCards.forEach(c => c.classList.remove('active'));
+                wcBgs.forEach(bg => bg.classList.remove('active'));
+
+                card.classList.add('active');
+                wcBgs[index].classList.add('active');
+            });
+        });
+
+
+
+        const wbItems = document.querySelectorAll('.wb-item');
+        const wbCountDisplay = document.getElementById('wb-count');
+        const wbTotalDisplay = document.getElementById('wb-total');
+
+        wbItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('selected');
+
+                let totalItems = 0;
+                let totalPrice = 0;
+
+                document.querySelectorAll('.wb-item.selected').forEach(selectedItem => {
+                    totalItems++;
+                    totalPrice += parseInt(selectedItem.getAttribute('data-price'));
+                });
+
+                wbCountDisplay.innerText = totalItems;
+                wbTotalDisplay.innerText = "₹" + totalPrice.toLocaleString('en-IN');
+            });
+        });
+
+
+        const wbHeader = document.querySelector('.wb-header');
+        const wbGridItems = document.querySelectorAll('.wb-item');
+        const wbVisual = document.querySelector('.wb-basket-visual');
+
+        gsap.fromTo(wbHeader,
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".weekly-basket-section", start: "top 80%" }
+            }
+        );
+
+        gsap.fromTo(wbGridItems,
+            { x: -50, opacity: 0 },
+            {
+                x: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "power2.out",
+                scrollTrigger: { trigger: ".wb-items-grid", start: "top 75%" }
+            }
+        );
+
+        gsap.fromTo(wbVisual,
+            { scale: 0.9, opacity: 0 },
+            {
+                scale: 1, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".wb-right-col", start: "top 75%" }
+            }
+        );
+
+
+        const testiHeader = document.querySelector('.testi-header');
+        const testiContainer = document.querySelector('.testi-slider-container');
+
+        gsap.fromTo(testiHeader,
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".testimonial-section", start: "top 85%" }
+            }
+        );
+
+        gsap.fromTo(testiContainer,
+            { opacity: 0, scale: 0.95 },
+            {
+                opacity: 1, scale: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: ".testimonial-section", start: "top 75%" }
+            }
+        );
+
+
+        const ctaContent = document.querySelector('.cta-content');
+
+        gsap.fromTo(ctaContent,
+            { y: 60, opacity: 0, scale: 0.95 },
+            {
+                y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power4.out",
+                scrollTrigger: { trigger: ".cta-section", start: "top 80%" }
+            }
+        );
+
+
+    </script>
+</body>
+
+</html>

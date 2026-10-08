@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Grocery Store</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-bg"></div>
+        <div class="glass-card">
+            <div class="premium-spinner"></div>
+            <div class="loader-text">Preparing Fresh Groceries...</div>
+        </div>
+    </div>
+
+    <div class="top-bar" id="top-bar">
+        <div class="moving-text">
+            <span> Special Offer: Get 20% Off on Fresh Organic Vegetables! Use Code: FRESH20 | Free Delivery on orders
+                above $50! </span>
+        </div>
+        <div class="close-btn-bg">
+            <span class="close-btn" id="close-top-bar">&times;</span>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-mobile-header">
+                <a href="index.html" class="logo"><img src="./asset/s1.webp" alt="logo"></a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item mobile-auth">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="signup.html" class="btn btn-signup">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-auth" data-aos="fade-left" data-aos-delay="700">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero-centered" id="about-hero">
+
+        <div class="ah-bg-slider">
+            <div class="ah-bg-slide active" style="background-image: url('./asset/q12.webp');">
+            </div>
+            <div class="ah-bg-slide" style="background-image: url('./asset/w17.webp');">
+            </div>
+        </div>
+
+        <div class="ah-overlay"></div>
+
+        <div class="ah-container">
+
+            <div class="ah-breadcrumb-dark">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <span class="divider">/</span>
+                <span class="current">About Us</span>
+            </div>
+
+            <div class="ah-content-slider">
+
+                <div class="ah-content-slide active">
+                    <h1>Freshness Delivered <span>Daily</span></h1>
+                    <p>Your trusted source for handpicked, organic groceries directly from the farm to your table.</p>
+                    <a href="404page.html" class="ah-btn">Explore Our Story</a>
+                </div>
+
+                <div class="ah-content-slide">
+                    <h1>Quality You Can <span>Trust</span></h1>
+                    <p>Experience seamless shopping with our premium daily essentials and lightning-fast delivery.</p>
+                    <a href="404page.html" class="ah-btn">View Premium Quality</a>
+                </div>
+
+            </div>
+
+            <div class="ah-search-wrapper">
+                <div class="ah-search-box">
+                    <input type="text" id="ah-search-input" placeholder="Search for groceries, fruits, veggies...">
+                    <button onclick="window.location.href='404page.html'" id="ah-search-btn"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <span id="ah-error-msg" class="ah-error-msg">Please enter something to search!</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="our-story-section" id="our-story">
+        <div class="os-header">
+            <h2 class="os-gradient-heading">Our Story</h2>
+            <p class="os-subheading">From a Simple Idea to Your Everyday Store</p>
+        </div>
+
+        <div class="os-container">
+
+
+            <div class="os-image-col">
+                <div class="os-sticky-wrapper">
+                    <img src="./asset/w20.webp" alt="Our Grocery Store">
+                    <div class="os-glass-badge">
+                        <i class="fa-solid fa-store"></i>
+                        <div>
+                            <strong>Trusted Store</strong>
+                            <span>Since 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="os-content-col">
+                <div class="os-timeline">
+
+                    <div class="os-step-card">
+                        <span class="os-step-bg-num">01</span>
+                        <div class="os-step-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>The Beginning</h3>
+                        <p>It all started with a simple vision: to provide local neighborhoods with fresh, organic
+                            produce without the hassle of crowded and unorganized markets.</p>
+                        <a href="404page.html" class="os-step-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="os-step-card">
+                        <span class="os-step-bg-num">02</span>
+                        <div class="os-step-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3>Growing With Customers</h3>
+                        <p>As love for our fresh ingredients grew, so did we. We expanded our inventory, partnering
+                            directly with local farmers to ensure top-notch quality and fair prices.</p>
+                        <a href="404page.html" class="os-step-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="os-step-card">
+                        <span class="os-step-bg-num">03</span>
+                        <div class="os-step-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <h3>Building Better Grocery Shopping</h3>
+                        <p>We introduced our online platform, combining technology with everyday grocery shopping to
+                            bring ultimate convenience right to your fingertips.</p>
+                        <a href="404page.html" class="os-step-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="os-step-card">
+                        <span class="os-step-bg-num">04</span>
+                        <div class="os-step-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Today & Beyond</h3>
+                        <p>Today, we are your trusted everyday store. We continue to innovate, keeping freshness,
+                            sustainability, and customer satisfaction as our top priorities.</p>
+                        <a href="404page.html" class="os-step-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="what-we-bring-section" id="what-we-bring">
+        <div class="wwb-container">
+
+            <div class="wwb-grid">
+
+                <div class="wwb-tile wwb-heading-tile">
+                    <h2 class="wwb-gradient-heading">What We Bring to Your Kitchen</h2>
+                    <p>We source the finest, freshest, and most essential items to complete your home. Explore our wide
+                        range of premium categories curated just for you.</p>
+                </div>
+
+                <div class="wwb-tile wwb-image-tile tile-produce">
+                    <div class="wwb-bg" style="background-image: url('./asset/q13.webp');">
+                    </div>
+                    <div class="wwb-overlay"></div>
+                    <div class="wwb-content">
+                        <h3>Fresh Produce</h3>
+                        <p class="wwb-desc">Crisp vegetables and juicy fruits picked at peak ripeness directly from
+                            farms.</p>
+                    </div>
+                </div>
+
+                <div class="wwb-tile wwb-image-tile tile-dairy">
+                    <div class="wwb-bg" style="background-image: url('./asset/q21.webp');">
+                    </div>
+                    <div class="wwb-overlay"></div>
+                    <div class="wwb-content">
+                        <h3>Dairy Essentials</h3>
+                        <p class="wwb-desc">Farm-fresh milk, organic cheese, and healthy eggs for your daily needs.</p>
+                    </div>
+                </div>
+
+                <div class="wwb-tile wwb-image-tile tile-pantry">
+                    <div class="wwb-bg" style="background-image: url('./asset/q23.webp');">
+                    </div>
+                    <div class="wwb-overlay"></div>
+                    <div class="wwb-content">
+                        <h3>Pantry Staples</h3>
+                        <p class="wwb-desc">High-quality grains, pulses, and exotic spices to stock your shelves.</p>
+                    </div>
+                </div>
+
+                <div class="wwb-tile wwb-image-tile tile-bakery">
+                    <div class="wwb-bg" style="background-image: url('./asset/q24.webp');">
+                    </div>
+                    <div class="wwb-overlay"></div>
+                    <div class="wwb-content">
+                        <h3>Bakery Favorites</h3>
+                        <p class="wwb-desc">Freshly baked artisan breads, pastries, and sweet everyday treats.</p>
+                    </div>
+                </div>
+
+                <div class="wwb-tile wwb-image-tile tile-beverages">
+                    <div class="wwb-bg" style="background-image: url('./asset/w8.webp');">
+                    </div>
+                    <div class="wwb-overlay"></div>
+                    <div class="wwb-content">
+                        <h3>Beverages</h3>
+                        <p class="wwb-desc">Refreshing juices, premium tea, and organic roasted coffee.</p>
+                    </div>
+                </div>
+
+                <div class="wwb-tile wwb-image-tile tile-household">
+                    <div class="wwb-bg" style="background-image: url('./asset/q5.webp');">
+                    </div>
+                    <div class="wwb-overlay"></div>
+                    <div class="wwb-content">
+                        <h3>Household Needs</h3>
+                        <p class="wwb-desc">Premium cleaning essentials and daily home care products.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="core-values-section" id="core-values">
+        <div class="cv-header-container">
+            <h2 class="cv-gradient-heading">Our Core Values</h2>
+            <p class="cv-subheading">The fundamental principles that guide us in bringing the absolute best to your
+                everyday kitchen.</p>
+        </div>
+
+        <div class="cv-accordion-box">
+
+            <div class="cv-item active">
+                <div class="cv-item-header">
+                    <h3><span class="cv-num">01</span> Freshness First</h3>
+                    <i class="fa-solid fa-arrow-down cv-toggle-icon"></i>
+                </div>
+                <div class="cv-expand-wrapper">
+                    <div class="cv-expand-inner">
+                        <div class="cv-content-flex">
+                            <div class="cv-text-col">
+                                <p>We focus on unmatched quality and absolute freshness. Every single product is
+                                    handpicked daily directly from farms to ensure you get only the finest ingredients.
+                                </p>
+                            </div>
+                            <div class="cv-img-col">
+                                <img src="./asset/w14.webp" alt="Freshness First">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <h3><span class="cv-num">02</span> Customer First</h3>
+                    <i class="fa-solid fa-arrow-down cv-toggle-icon"></i>
+                </div>
+                <div class="cv-expand-wrapper">
+                    <div class="cv-expand-inner">
+                        <div class="cv-content-flex">
+                            <div class="cv-text-col">
+                                <p>Your satisfaction is our priority. We make everyday shopping incredibly convenient,
+                                    tailoring our services to meet your specific household needs.</p>
+                            </div>
+                            <div class="cv-img-col">
+                                <img src="./asset/q7.webp" alt="Customer First">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <h3><span class="cv-num">03</span> Quality Always</h3>
+                    <i class="fa-solid fa-arrow-down cv-toggle-icon"></i>
+                </div>
+                <div class="cv-expand-wrapper">
+                    <div class="cv-expand-inner">
+                        <div class="cv-content-flex">
+                            <div class="cv-text-col">
+                                <p>No compromises. Our products are rigorously and carefully selected through multiple
+                                    quality checks before they ever reach your doorstep.</p>
+                            </div>
+                            <div class="cv-img-col">
+                                <img src="./asset/q24.webp" alt="Quality Always">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <h3><span class="cv-num">04</span> Simple Shopping</h3>
+                    <i class="fa-solid fa-arrow-down cv-toggle-icon"></i>
+                </div>
+                <div class="cv-expand-wrapper">
+                    <div class="cv-expand-inner">
+                        <div class="cv-content-flex">
+                            <div class="cv-text-col">
+                                <p>Experience hassle-free grocery runs with our easy browsing interface, quick ordering
+                                    system, and lightning-fast secure delivery.</p>
+                            </div>
+                            <div class="cv-img-col">
+                                <img src="./asset/q3.webp" alt="Simple Shopping">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="stats-sourcing-section" id="stats-sourcing">
+        <div class="ss-container">
+
+            <div class="ss-left-col">
+                <div class="ss-image-wrapper">
+                    <div class="ss-bg-image" style="background-image: url('./asset/w16.webp');">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="ss-right-col">
+                <div class="ss-content">
+                    <h2 class="ss-heading">Trusted Sourcing. <br><span>Proven Results.</span></h2>
+                    <p class="ss-desc">We know exactly where your food comes from. By partnering directly with the best
+                        farmers, we have built a community that trusts us for their daily essentials.</p>
+
+                    <div class="ss-counters-grid">
+
+                        <div class="ss-counter-box">
+                            <i class="fa-solid fa-face-smile ss-box-icon"></i>
+                            <div class="ss-number-wrapper">
+                                <h3 class="ss-counter-val" data-target="10">0</h3>
+                                <span class="ss-suffix">K+</span>
+                            </div>
+                            <p class="ss-box-text">Happy Customers</p>
+                        </div>
+
+                        <div class="ss-counter-box">
+                            <i class="fa-solid fa-basket-shopping ss-box-icon"></i>
+                            <div class="ss-number-wrapper">
+                                <h3 class="ss-counter-val" data-target="500">0</h3>
+                                <span class="ss-suffix">+</span>
+                            </div>
+                            <p class="ss-box-text">Grocery Products</p>
+                        </div>
+
+                        <div class="ss-counter-box">
+                            <i class="fa-solid fa-handshake ss-box-icon"></i>
+                            <div class="ss-number-wrapper">
+                                <h3 class="ss-counter-val" data-target="50">0</h3>
+                                <span class="ss-suffix">+</span>
+                            </div>
+                            <p class="ss-box-text">Trusted Suppliers</p>
+                        </div>
+
+                        <div class="ss-counter-box">
+                            <i class="fa-solid fa-bolt ss-box-icon"></i>
+                            <div class="ss-number-wrapper">
+                                <h3 class="ss-counter-val" data-target="30">0</h3>
+                                <span class="ss-suffix"> Min</span>
+                            </div>
+                            <p class="ss-box-text">Express Delivery</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="customer-stories-section" id="customer-stories">
+        <div class="cs-header">
+            <h2 class="cs-gradient-heading">Why People Shop With Us</h2>
+            <p class="cs-subheading">Real stories from our happy customers who have transformed their everyday grocery
+                shopping.</p>
+        </div>
+
+        <div class="cs-marquee-wrapper">
+            <div class="cs-marquee-track">
+
+
+                <div class="cs-card">
+                    <i class="fa-solid fa-quote-left cs-quote-icon"></i>
+                    <p class="cs-quote-text">"Fresh products, simple ordering and extremely quick delivery. It feels
+                        like getting groceries straight from the farm!"</p>
+                    <div class="cs-author-info">
+                        <img src="./asset/a25.webp" alt="Priya" class="cs-author-img">
+                        <div class="cs-author-details">
+                            <h4>Priya M.</h4>
+                            <span class="cs-verified"><i class="fa-solid fa-certificate"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-product-thumb">
+                    <img src="./asset/w4.webp" alt="Fresh Fruits">
+                </div>
+
+
+                <div class="cs-card">
+                    <i class="fa-solid fa-quote-left cs-quote-icon"></i>
+                    <p class="cs-quote-text">"My weekly grocery shopping has become much easier. The quality is
+                        consistently top-notch and the app is so easy to use."</p>
+                    <div class="cs-author-info">
+                        <img src="./asset/a23.webp" alt="Arun" class="cs-author-img">
+                        <div class="cs-author-details">
+                            <h4>Arun K.</h4>
+                            <span class="cs-verified"><i class="fa-solid fa-certificate"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-product-thumb">
+                    <img src="./asset/w2.webp" alt="Fresh Vegetables">
+                </div>
+
+
+                <div class="cs-card">
+                    <i class="fa-solid fa-quote-left cs-quote-icon"></i>
+                    <p class="cs-quote-text">"I love the organic selection. Everything is packed perfectly and arrives
+                        completely fresh. Highly recommended!"</p>
+                    <div class="cs-author-info">
+                        <img src="./asset/a30.webp" alt="Meena" class="cs-author-img">
+                        <div class="cs-author-details">
+                            <h4>Meena S.</h4>
+                            <span class="cs-verified"><i class="fa-solid fa-certificate"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-product-thumb">
+                    <img src="./asset/q4.webp" alt="Pantry Essentials">
+                </div>
+
+
+                <div class="cs-card">
+                    <i class="fa-solid fa-quote-left cs-quote-icon"></i>
+                    <p class="cs-quote-text">"Fresh products, simple ordering and extremely quick delivery. It feels
+                        like getting groceries straight from the farm!"</p>
+                    <div class="cs-author-info">
+                        <img src="./asset/a25.webp" alt="Priya" class="cs-author-img">
+                        <div class="cs-author-details">
+                            <h4>Priya M.</h4>
+                            <span class="cs-verified"><i class="fa-solid fa-certificate"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-product-thumb">
+                    <img src="./asset/w4.webp" alt="Fresh Fruits">
+                </div>
+
+
+                <div class="cs-card">
+                    <i class="fa-solid fa-quote-left cs-quote-icon"></i>
+                    <p class="cs-quote-text">"My weekly grocery shopping has become much easier. The quality is
+                        consistently top-notch and the app is so easy to use."</p>
+                    <div class="cs-author-info">
+                        <img src="./asset/a23.webp" alt="Arun" class="cs-author-img">
+                        <div class="cs-author-details">
+                            <h4>Arun K.</h4>
+                            <span class="cs-verified"><i class="fa-solid fa-certificate"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-product-thumb">
+                    <img src="./asset/w2.webp" alt="Fresh Vegetables">
+                </div>
+
+
+                <div class="cs-card">
+                    <i class="fa-solid fa-quote-left cs-quote-icon"></i>
+                    <p class="cs-quote-text">"I love the organic selection. Everything is packed perfectly and arrives
+                        completely fresh. Highly recommended!"</p>
+                    <div class="cs-author-info">
+                        <img src="./asset/a30.webp" alt="Meena" class="cs-author-img">
+                        <div class="cs-author-details">
+                            <h4>Meena S.</h4>
+                            <span class="cs-verified"><i class="fa-solid fa-certificate"></i> Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-product-thumb">
+                    <img src="./asset/q4.webp" alt="Pantry Essentials">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-cta-section" id="about-cta">
+        <div class="acta-container">
+
+            <div class="acta-image-col">
+                <div class="acta-image-wrapper">
+                    <img src="./asset/q12.webp" alt="Fresh Grocery Basket">
+                    <div class="acta-floating-card">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <div>
+                            <strong>100% Fresh</strong>
+                            <span>Handpicked Daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acta-content-col">
+                <span class="acta-subtitle">Let’s Fill Your Kitchen With Freshness</span>
+                <h2 class="acta-heading">Fresh Choices.<br><span>Happy Kitchens.</span></h2>
+                <p class="acta-desc">Discover top-quality, organic, and handpicked groceries for every meal, every day.
+                    Start your journey towards a healthier lifestyle with us.</p>
+
+                <div class="acta-buttons">
+                    <a href="404page.html" class="btn-acta-primary">Shop Groceries <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="404page.html" class="btn-acta-secondary">Explore Products</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="acta-bottom-marquee">
+            <div class="acta-marquee-track">
+                <span><i class="fa-solid fa-star-of-life"></i> Fresh Fruits</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Vegetables</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Dairy</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Bakery</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Pantry</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Beverages</span>
+
+                <span><i class="fa-solid fa-star-of-life"></i> Fresh Fruits</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Vegetables</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Dairy</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Bakery</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Pantry</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Beverages</span>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html" class="footer-logo"><img src="./asset/s1.webp" alt="logo"></a>
+
+
+                <div class="footer-search">
+                    <h4>Search & Order</h4>
+                    <div class="search-box">
+                        <input type="text" id="footer-search-input" placeholder="Type an item to order...">
+                        <button onclick="window.location.href='404page.html'" id="footer-search-btn"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div id="footer-message" class="footer-message"></div>
+                </div>
+
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="blog.html">Latest Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="404page.html">Fresh Vegetables</a></li>
+                    <li><a href="404page.html">Organic Fruits</a></li>
+                    <li><a href="404page.html">Dairy & Eggs</a></li>
+                    <li><a href="404page.html">Beverages & Snacks</a></li>
+                    <li><a href="404page.html">Daily Essentials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 7:00 AM – 10:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 FreshMart Grocery. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const bgSlides = document.querySelectorAll('.ah-bg-slide');
+            const textSlides = document.querySelectorAll('.ah-content-slide');
+            let currentSlideIndex = 0;
+
+            if (bgSlides.length > 0 && textSlides.length > 0) {
+                function changeHeroSlides() {
+
+                    bgSlides[currentSlideIndex].classList.remove('active');
+                    textSlides[currentSlideIndex].classList.remove('active');
+
+
+                    currentSlideIndex = (currentSlideIndex + 1) % bgSlides.length;
+
+
+                    bgSlides[currentSlideIndex].classList.add('active');
+                    textSlides[currentSlideIndex].classList.add('active');
+                }
+
+
+                setInterval(changeHeroSlides, 5000);
+            }
+
+
+            const searchInput = document.getElementById('ah-search-input');
+            const searchBtn = document.getElementById('ah-search-btn');
+            const errorMsg = document.getElementById('ah-error-msg');
+
+            if (searchBtn && searchInput && errorMsg) {
+                searchBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    if (searchInput.value.trim() === '') {
+
+                        errorMsg.style.display = 'block';
+                    } else {
+
+                        errorMsg.style.display = 'none';
+                        window.location.href = '404page.html'
+                        searchInput.value = '';
+                    }
+                });
+
+
+                searchInput.addEventListener('input', () => {
+                    if (searchInput.value.trim() !== '') {
+                        errorMsg.style.display = 'none';
+                    }
+                });
+            }
+
+
+
+            if (typeof gsap !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+
+                const ahContainerElements = document.querySelector('.ah-container');
+
+                if (ahContainerElements) {
+                    gsap.fromTo(ahContainerElements,
+                        { y: 50, opacity: 0 },
+                        {
+                            y: 0, opacity: 1, duration: 1.2, ease: "power3.out",
+                            scrollTrigger: {
+                                trigger: ".about-hero-centered",
+                                start: "top 80%"
+                            }
+                        }
+                    );
+                }
+            } else {
+                console.warn("GSAP is not loaded. Animations will not work.");
+            }
+        });
+
+        const osHeader = document.querySelector('.os-header');
+        const osImage = document.querySelector('.os-sticky-wrapper');
+        const osCards = document.querySelectorAll('.os-step-card');
+
+        if (osHeader && osImage && osCards.length > 0 && typeof gsap !== 'undefined') {
+
+            gsap.fromTo(osHeader,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                    scrollTrigger: { trigger: ".our-story-section", start: "top 85%" }
+                }
+            );
+
+            gsap.fromTo(osImage,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1, opacity: 1, duration: 1, ease: "power3.out",
+                    scrollTrigger: { trigger: ".os-container", start: "top 75%" }
+                }
+            );
+
+            osCards.forEach((card, index) => {
+                gsap.fromTo(card,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%"
+                        }
+                    }
+                );
+            });
+        }
+
+
+        if (typeof gsap !== 'undefined') {
+            const fjWrapper = document.querySelector('.fj-timeline-wrapper');
+            const fjSteps = document.querySelectorAll('.fj-step');
+
+            if (fjWrapper && fjSteps.length > 0) {
+
+                gsap.to(fjWrapper, {
+                    "--progress": "100%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".freshness-journey-section",
+                        start: "top 60%",
+                        end: "bottom 80%",
+                        scrub: 1
+                    }
+                });
+
+                fjSteps.forEach((step, index) => {
+                    ScrollTrigger.create({
+                        trigger: step,
+                        start: "top 75%",
+                        onEnter: () => step.classList.add('active'),
+                        onLeaveBack: () => step.classList.remove('active')
+                    });
+                });
+            }
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+
+                const wwbSection = document.querySelector(".what-we-bring-section");
+
+                if (wwbSection) {
+
+
+                    function initBentoAnimations() {
+
+
+                        gsap.fromTo(".wwb-heading-tile",
+                            { y: -60, scale: 0.95, opacity: 0 },
+                            {
+                                y: 0, scale: 1, opacity: 1, duration: 1, ease: "power3.out",
+                                scrollTrigger: { trigger: wwbSection, start: "top 85%" }
+                            }
+                        );
+
+
+                        gsap.fromTo(".tile-produce",
+                            { x: -60, opacity: 0 },
+                            {
+                                x: 0, opacity: 1, duration: 1, ease: "power3.out",
+                                scrollTrigger: { trigger: wwbSection, start: "top 80%" }
+                            }
+                        );
+
+
+                        gsap.fromTo(".tile-dairy, .tile-pantry, .tile-household",
+                            { x: 60, opacity: 0 },
+                            {
+                                x: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                                scrollTrigger: { trigger: wwbSection, start: "top 75%" }
+                            }
+                        );
+
+
+                        gsap.fromTo(".tile-bakery, .tile-beverages",
+                            { y: 60, opacity: 0 },
+                            {
+                                y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                                scrollTrigger: { trigger: wwbSection, start: "top 70%" }
+                            }
+                        );
+                    }
+
+
+                    setTimeout(() => {
+                        initBentoAnimations();
+
+                        ScrollTrigger.refresh();
+                    }, 2500);
+
+
+                    window.addEventListener('load', () => {
+                        setTimeout(() => ScrollTrigger.refresh(), 500);
+                    });
+
+                }
+            } else {
+                console.error("GSAP is not loaded! Please check your script tags.");
+            }
+        });
+
+
+        const cvItems = document.querySelectorAll('.cv-item');
+
+        cvItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                cvItems.forEach(el => el.classList.remove('active'));
+                item.classList.add('active');
+            });
+
+            item.addEventListener('click', () => {
+                cvItems.forEach(el => el.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+
+        setTimeout(() => {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+                const cvHeader = document.querySelector('.cv-header-container');
+                const cvAllItems = document.querySelectorAll('.cv-item');
+
+                if (cvHeader && cvAllItems.length > 0) {
+
+                    gsap.fromTo(cvHeader,
+                        { y: -50, opacity: 0 },
+                        {
+                            y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                            scrollTrigger: { trigger: ".core-values-section", start: "top 85%" }
+                        }
+                    );
+
+                    gsap.fromTo(cvAllItems,
+                        { y: 60, opacity: 0 },
+                        {
+                            y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                            scrollTrigger: { trigger: ".cv-accordion-box", start: "top 75%" }
+                        }
+                    );
+                }
+            }
+        }, 2500);
+
+
+
+        const counterBoxes = document.querySelectorAll('.ss-counter-box');
+        const mainBgImage = document.querySelector('.ss-bg-image');
+
+        if (counterBoxes.length > 0 && mainBgImage) {
+            counterBoxes.forEach(box => {
+                box.addEventListener('mouseenter', () => {
+                    mainBgImage.classList.add('zoomed');
+                });
+                box.addEventListener('mouseleave', () => {
+                    mainBgImage.classList.remove('zoomed');
+                });
+            });
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const ssSection = document.querySelector(".stats-sourcing-section");
+
+            if (ssSection) {
+
+                gsap.fromTo(".ss-image-wrapper",
+                    { x: -80, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1.2, ease: "power3.out",
+                        scrollTrigger: { trigger: ssSection, start: "top 75%" }
+                    }
+                );
+
+                gsap.fromTo([".ss-card-1", ".ss-card-2"],
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1, opacity: 1, duration: 1, stagger: 0.3, ease: "back.out(1.5)",
+                        scrollTrigger: { trigger: ".ss-image-wrapper", start: "top 60%" }
+                    }
+                );
+
+                gsap.fromTo(".ss-heading, .ss-desc",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out",
+                        scrollTrigger: { trigger: ".ss-right-col", start: "top 80%" }
+                    }
+                );
+
+                gsap.fromTo(".ss-counter-box",
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: ".ss-counters-grid",
+                            start: "top 85%",
+                            once: true,
+                            onEnter: () => {
+                                const counters = document.querySelectorAll('.ss-counter-val');
+                                counters.forEach(counter => {
+                                    counter.innerText = '0';
+                                    const updateCounter = () => {
+                                        const target = +counter.getAttribute('data-target');
+                                        const c = +counter.innerText;
+                                        const increment = target / 40;
+                                        if (c < target) {
+                                            counter.innerText = Math.ceil(c + increment);
+                                            setTimeout(updateCounter, 35);
+                                        } else {
+                                            counter.innerText = target;
+                                        }
+                                    };
+                                    updateCounter();
+                                });
+                            }
+                        }
+                    }
+                );
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            setTimeout(() => {
+                if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+                    const csSection = document.querySelector(".customer-stories-section");
+
+                    if (csSection) {
+
+                        gsap.fromTo(".cs-header",
+                            { y: 50, opacity: 0 },
+                            {
+                                y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                                scrollTrigger: { trigger: csSection, start: "top 85%" }
+                            }
+                        );
+
+                        gsap.fromTo(".cs-marquee-wrapper",
+                            { opacity: 0, scale: 0.95 },
+                            {
+                                opacity: 1, scale: 1, duration: 1, delay: 0.2, ease: "power3.out",
+                                scrollTrigger: { trigger: csSection, start: "top 75%" }
+                            }
+                        );
+
+                        ScrollTrigger.refresh();
+                    }
+                }
+            }, 2500);
+
+        });
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const actaSection = document.querySelector(".about-cta-section");
+
+            if (actaSection) {
+
+                gsap.fromTo(".acta-image-col",
+                    { x: -100, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1.2, ease: "power3.out",
+                        scrollTrigger: { trigger: actaSection, start: "top 75%" }
+                    }
+                );
+
+                gsap.fromTo(".acta-content-col",
+                    { x: 100, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1.2, ease: "power3.out",
+                        scrollTrigger: { trigger: actaSection, start: "top 75%" }
+                    }
+                );
+
+                gsap.fromTo(".acta-bottom-marquee",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: actaSection, start: "top 85%" }
+                    }
+                );
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Grocery Store</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-bg"></div>
+        <div class="glass-card">
+            <div class="premium-spinner"></div>
+            <div class="loader-text">Preparing Fresh Groceries...</div>
+        </div>
+    </div>
+
+    <div class="top-bar" id="top-bar">
+        <div class="moving-text">
+            <span> Special Offer: Get 20% Off on Fresh Organic Vegetables! Use Code: FRESH20 | Free Delivery on orders
+                above $50! </span>
+        </div>
+        <div class="close-btn-bg">
+            <span class="close-btn" id="close-top-bar">&times;</span>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-mobile-header">
+                <a href="index.html" class="logo"><img src="./asset/s1.webp" alt="logo"></a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item mobile-auth">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="signup.html" class="btn btn-signup">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-auth" data-aos="fade-left" data-aos-delay="700">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-hero-section" id="contact-hero">
+
+
+        <div class="ch-bg-slider">
+            <div class="ch-bg-slide active" style="background-image: url('./asset/w24.webp');"></div>
+            <div class="ch-bg-slide" style="background-image: url('./asset/q12.webp');"></div>
+        </div>
+
+
+        <div class="ch-overlay"></div>
+
+        <div class="ch-container">
+
+
+            <div class="ch-left-col">
+
+
+                <div class="ch-breadcrumb">
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <span class="divider">/</span>
+                    <span class="current">Contact</span>
+                </div>
+
+
+                <div class="ch-content-slider">
+
+                    <div class="ch-content-slide active">
+                        <span class="ch-label"><i class="fa-solid fa-headset"></i> We're Here To Help</span>
+                        <h1>Have a Question? <br><span>Let’s Talk Fresh.</span></h1>
+                        <p>Whether you need help with an order, delivery, premium grocery products, or anything else,
+                            our expert team is ready to help you 24/7.</p>
+                        <a href="404page.html" class="ch-btn">Contact Support <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+
+                    <div class="ch-content-slide">
+                        <span class="ch-label"><i class="fa-solid fa-truck-fast"></i> Track & Manage</span>
+                        <h1>Deliveries. <br><span>Track Your Orders.</span></h1>
+                        <p>Check your order status, modify delivery slots, or manage your daily grocery subscriptions
+                            with ultimate ease.</p>
+                        <a href="404page.html" class="ch-btn">Track Order <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="ch-right-col">
+
+
+                <div class="ch-image-slider">
+                    <div class="ch-image-slide active">
+                        <img src="./asset/q24.webp" alt="Fresh Grocery Basket">
+                    </div>
+                    <div class="ch-image-slide">
+                        <img src="./asset/q7.webp" alt="Delivery Box">
+                    </div>
+
+
+                    <div class="ch-delivery-route">
+                        <svg viewBox="0 0 280 100" xmlns="http://www.w3.org/2000/svg" class="route-svg">
+
+                            <path d="M 50 75 Q 140 15 230 75" fill="transparent" stroke="#ffffff" stroke-width="3"
+                                stroke-dasharray="8 8" class="route-line" />
+
+                            <circle cx="50" cy="75" r="6" fill="#2ecc71" stroke="#ffffff" stroke-width="2" />
+                            <circle cx="230" cy="75" r="6" fill="#ffffff" stroke="#2ecc71" stroke-width="3" />
+                        </svg>
+                        <i class="fa-solid fa-truck route-truck"></i>
+                    </div>
+                </div>
+
+
+                <div class="ch-floating-badge ch-badge-support">
+                    <div class="pulse-dot"></div>
+                    <span>24/7 Support</span>
+                </div>
+
+
+                <div class="ch-floating-badge ch-badge-price">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Fresh Organic <br><strong>₹120 / kg</strong></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="ch-marquee-wrapper">
+            <div class="ch-marquee-track">
+                <span><i class="fa-solid fa-star-of-life"></i> Fresh Support</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Fast Response</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Happy Customers</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Premium Quality</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Expert Advice</span>
+
+
+                <span><i class="fa-solid fa-star-of-life"></i> Fresh Support</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Fast Response</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Happy Customers</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Premium Quality</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Expert Advice</span>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="contact-form-section" id="contact-form">
+        <div class="cf-container">
+
+
+            <div class="cf-left-col">
+                <h2 class="cf-heading">Tell Us What <br><span>You Need</span></h2>
+                <p class="cf-subheading">Select a topic below to help us route your inquiry to the right expert team.
+                </p>
+
+                <div class="cf-categories">
+                    <button class="cf-cat-btn active"
+                        data-desc="Get fast assistance with your recent orders, delivery tracking, modifications, or cancellations.">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Support
+                    </button>
+                    <button class="cf-cat-btn"
+                        data-desc="Track your delivery driver, report missing items, or change your delivery time slot easily.">
+                        <i class="fa-solid fa-truck-fast"></i> Delivery Question
+                    </button>
+                    <button class="cf-cat-btn"
+                        data-desc="Need details about organic certifications, sourcing, allergens, or seasonal availability? Ask here.">
+                        <i class="fa-solid fa-carrot"></i> Product Inquiry
+                    </button>
+                    <button class="cf-cat-btn"
+                        data-desc="Resolve failed transactions, manage saved cards, or understand your invoice and subscription billing.">
+                        <i class="fa-regular fa-credit-card"></i> Payment Help
+                    </button>
+                    <button class="cf-cat-btn"
+                        data-desc="Not happy with a product? Request a replacement, refund, or report damaged goods.">
+                        <i class="fa-solid fa-rotate-left"></i> Return / Refund
+                    </button>
+                    <button class="cf-cat-btn"
+                        data-desc="For media inquiries, partnership opportunities, or any other general questions you might have.">
+                        <i class="fa-regular fa-comment-dots"></i> General Question
+                    </button>
+                </div>
+
+
+                <div class="cf-dynamic-desc">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p id="cf-desc-text">Get fast assistance with your recent orders, delivery tracking, modifications,
+                        or cancellations.</p>
+                </div>
+
+
+                <div class="cf-left-image-wrapper">
+                    <img src="./asset/w22.webp" alt="Fresh Customer Support">
+                    <div class="cf-left-image-overlay">
+                        <span><i class="fa-solid fa-leaf"></i> Fresh Support Delivered Daily</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cf-right-col">
+                <div class="cf-form-card">
+
+                    <div class="cf-form-header">
+                        <h3>Send a Message</h3>
+                        <p>We usually reply within a few hours.</p>
+                    </div>
+
+                    <form id="premiumContactForm" novalidate>
+
+                        <input type="hidden" id="cf-inquiry-type" value="Order Support">
+
+
+                        <div class="cf-input-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="cf-name" placeholder="John Doe">
+                            <span class="cf-error-msg" id="err-name">Please enter a valid name (Letters only).</span>
+                        </div>
+
+
+                        <div class="cf-input-grid">
+                            <div class="cf-input-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="cf-email" placeholder="john@example.com">
+                                <span class="cf-error-msg" id="err-email">Please enter a valid email address.</span>
+                            </div>
+                            <div class="cf-input-group">
+                                <label>Phone Number *</label>
+                                <input type="text" id="cf-phone" placeholder="9876543210" maxlength="10"
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                <span class="cf-error-msg" id="err-phone">Please enter a valid 10-digit number.</span>
+                            </div>
+                        </div>
+
+
+                        <div class="cf-input-group">
+                            <label>Order Number (Optional)</label>
+                            <input type="text" id="cf-order" placeholder="e.g. ORD-123456">
+                        </div>
+
+
+                        <div class="cf-input-group">
+                            <label>Your Message *</label>
+                            <textarea id="cf-message" rows="4" placeholder="How can we help you today?"></textarea>
+                            <span class="cf-error-msg" id="err-message">Message must be at least 10 characters
+                                long.</span>
+                        </div>
+
+
+                        <div class="cf-success-box" id="cf-success-msg">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Message Sent Successfully! Redirecting...</span>
+                        </div>
+
+
+                        <button type="submit" class="cf-submit-btn" id="cf-submit-btn">
+                            <span class="btn-text">Send Message <i class="fa-solid fa-arrow-right"></i></span>
+                            <i class="fa-solid fa-paper-plane fly-icon"></i>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="store-map-section" id="store-location">
+
+
+        <div class="sm-main-wrapper">
+            <div class="sm-map-container">
+
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.001696423075!2d77.59127971527014!3d12.971598790855866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="sm-iframe">
+                </iframe>
+
+
+                <div class="sm-map-overlay"></div>
+
+
+                <div class="sm-custom-pin">
+                    <div class="pin-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                    <div class="pin-pulse"></div>
+                    <div class="pin-shadow"></div>
+                </div>
+
+
+                <div class="sm-floating-panel">
+
+                    <div class="sm-panel-header">
+                        <h3>FreshMart Grocery</h3>
+                        <span class="sm-status"><span class="dot"></span> Open Now</span>
+                    </div>
+
+                    <div class="sm-info-group">
+                        <div class="sm-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="sm-info-text">
+                            <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil</p>
+                            <span>Salem, Tamil Nadu</span>
+                        </div>
+                    </div>
+
+                    <div class="sm-divider"></div>
+
+                    <div class="sm-hours">
+                        <h4>Store Hours</h4>
+                        <div class="sm-time-row">
+                            <span>Mon – Sat</span>
+                            <span>8:00 AM – 10:00 PM</span>
+                        </div>
+                        <div class="sm-time-row">
+                            <span>Sunday</span>
+                            <span class="highlight">9:00 AM – 8:00 PM</span>
+                        </div>
+                    </div>
+
+                    <a href="404page.html" class="sm-direction-btn">Get Directions <i
+                            class="fa-solid fa-arrow-right"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="contact-info-section" id="contact-info">
+        <div class="ci-container">
+
+            <div class="ci-header">
+                <h2 class="ci-heading">We’re Always <span>Within Reach</span></h2>
+                <p class="ci-subheading">Connect with our dedicated team through your preferred channel. We ensure a
+                    seamless experience every time.</p>
+            </div>
+
+            <div class="ci-strip-wrapper">
+
+                <div class="ci-animated-line">
+                    <div class="ci-glowing-dot"></div>
+                </div>
+
+                <div class="ci-panels">
+
+
+                    <div class="ci-panel">
+                        <div class="ci-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <div class="ci-content">
+                            <h4>Call Us</h4>
+                            <p>+91 98765 43210</p>
+                            <div class="ci-hidden-action">
+                                <a href="404page.html">Talk to our support team <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ci-panel">
+                        <div class="ci-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="ci-content">
+                            <h4>Email Us</h4>
+                            <p>info@thestackly.com</p>
+                            <div class="ci-hidden-action">
+                                <a href="404page.html">Write to our experts <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ci-panel">
+                        <div class="ci-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="ci-content">
+                            <h4>Visit Us</h4>
+                            <p>Salem</p>
+                            <div class="ci-hidden-action">
+                                <a href="404page.html">Get store directions <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ci-panel">
+                        <div class="ci-icon-box"><i class="fa-solid fa-clock"></i></div>
+                        <div class="ci-content">
+                            <h4>Working Hours</h4>
+                            <p>8:00 AM – 10:00 PM</p>
+                            <div class="ci-hidden-action">
+                                <a href="404page.html">Open 7 days a week <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="grocery-cta-section" id="grocery-cta">
+
+
+        <div class="gcs-bg-wrapper">
+
+            <div class="gcs-bg-img" style="background-image: url('./asset/w25.webp');"></div>
+
+            <div class="gcs-overlay"></div>
+        </div>
+
+
+        <div class="gcs-content">
+            <h2 class="gcs-heading">Need Groceries?<br><span>We’ve Got You.</span></h2>
+            <p class="gcs-desc">Get fresh essentials, everyday favorites and quality products delivered straight to your
+                doorstep.</p>
+
+            <div class="gcs-btn-group">
+                <a href="404page.html" class="gcs-btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="404page.html" class="gcs-btn-secondary">Explore Categories</a>
+            </div>
+        </div>
+
+
+        <div class="gcs-marquee">
+            <div class="gcs-marquee-track">
+
+                <span>Fresh Fruits</span><i class="fa-solid fa-circle"></i>
+                <span>Vegetables</span><i class="fa-solid fa-circle"></i>
+                <span>Dairy</span><i class="fa-solid fa-circle"></i>
+                <span>Bakery</span><i class="fa-solid fa-circle"></i>
+                <span>Pantry</span><i class="fa-solid fa-circle"></i>
+                <span>Beverages</span><i class="fa-solid fa-circle"></i>
+
+
+                <span>Fresh Fruits</span><i class="fa-solid fa-circle"></i>
+                <span>Vegetables</span><i class="fa-solid fa-circle"></i>
+                <span>Dairy</span><i class="fa-solid fa-circle"></i>
+                <span>Bakery</span><i class="fa-solid fa-circle"></i>
+                <span>Pantry</span><i class="fa-solid fa-circle"></i>
+                <span>Beverages</span><i class="fa-solid fa-circle"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html" class="footer-logo"><img src="./asset/s1.webp" alt="logo"></a>
+
+
+                <div class="footer-search">
+                    <h4>Search & Order</h4>
+                    <div class="search-box">
+                        <input type="text" id="footer-search-input" placeholder="Type an item to order...">
+                        <button id="footer-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div id="footer-message" class="footer-message"></div>
+                </div>
+
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="blog.html">Latest Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="404page.html">Fresh Vegetables</a></li>
+                    <li><a href="404page.html">Organic Fruits</a></li>
+                    <li><a href="404page.html">Dairy & Eggs</a></li>
+                    <li><a href="404page.html">Beverages & Snacks</a></li>
+                    <li><a href="404page.html">Daily Essentials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 7:00 AM – 10:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 FreshMart Grocery. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+
+        const chBgSlides = document.querySelectorAll('.ch-bg-slide');
+        const chContentSlides = document.querySelectorAll('.ch-content-slide');
+        const chImageSlides = document.querySelectorAll('.ch-image-slide');
+        let chSlideIndex = 0;
+
+        if (chBgSlides.length > 0 && chContentSlides.length > 0 && chImageSlides.length > 0) {
+            setInterval(() => {
+
+                chBgSlides[chSlideIndex].classList.remove('active');
+                chContentSlides[chSlideIndex].classList.remove('active');
+                chImageSlides[chSlideIndex].classList.remove('active');
+
+
+                chSlideIndex = (chSlideIndex + 1) % chBgSlides.length;
+
+
+                chBgSlides[chSlideIndex].classList.add('active');
+                chContentSlides[chSlideIndex].classList.add('active');
+                chImageSlides[chSlideIndex].classList.add('active');
+            }, 5000); 
+        }
+
+
+        if (typeof gsap !== 'undefined') {
+            const chHero = document.querySelector(".contact-hero-section");
+
+            if (chHero) {
+
+                gsap.fromTo(".ch-left-col",
+                    { x: -100, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
+                );
+
+
+                gsap.fromTo(".ch-image-slider",
+                    { x: 100, scale: 0.9, opacity: 0 },
+                    { x: 0, scale: 1, opacity: 1, duration: 1.2, ease: "power3.out", delay: 0.2 }
+                );
+
+
+                gsap.fromTo([".ch-floating-badge", ".ch-delivery-route"],
+                    { scale: 0, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 1, stagger: 0.2, delay: 1, ease: "back.out(1.5)" }
+                );
+            }
+        }
+
+
+
+
+        const catBtns = document.querySelectorAll('.cf-cat-btn');
+        const descText = document.getElementById('cf-desc-text');
+        const hiddenTypeInput = document.getElementById('cf-inquiry-type');
+
+        if (catBtns.length > 0) {
+            catBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+
+                    catBtns.forEach(b => b.classList.remove('active'));
+
+
+                    btn.classList.add('active');
+
+
+                    const desc = btn.getAttribute('data-desc');
+                    descText.innerHTML = desc;
+
+
+                    hiddenTypeInput.value = btn.innerText.trim();
+                });
+            });
+        }
+
+
+        const contactForm = document.getElementById('premiumContactForm');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); 
+
+                let isValid = true;
+
+
+                const showError = (inputId, errId) => {
+                    document.getElementById(inputId).parentElement.classList.add('error');
+                    document.getElementById(errId).style.display = 'block';
+                    isValid = false;
+                };
+
+                const clearError = (inputId, errId) => {
+                    document.getElementById(inputId).parentElement.classList.remove('error');
+                    document.getElementById(errId).style.display = 'none';
+                };
+
+
+                const nameInput = document.getElementById('cf-name').value.trim();
+                const nameRegex = /^[A-Za-z\s]+$/;
+                if (nameInput === "" || !nameRegex.test(nameInput)) {
+                    showError('cf-name', 'err-name');
+                } else {
+                    clearError('cf-name', 'err-name');
+                }
+
+
+                const emailInput = document.getElementById('cf-email').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailInput === "" || !emailRegex.test(emailInput)) {
+                    showError('cf-email', 'err-email');
+                } else {
+                    clearError('cf-email', 'err-email');
+                }
+
+
+                const phoneInput = document.getElementById('cf-phone').value.trim();
+                const phoneRegex = /^\d{10}$/;
+                if (phoneInput === "" || !phoneRegex.test(phoneInput)) {
+                    showError('cf-phone', 'err-phone');
+                } else {
+                    clearError('cf-phone', 'err-phone');
+                }
+
+
+                const msgInput = document.getElementById('cf-message').value.trim();
+                if (msgInput === "" || msgInput.length < 10) {
+                    showError('cf-message', 'err-message');
+                } else {
+                    clearError('cf-message', 'err-message');
+                }
+
+
+                if (isValid) {
+                    const submitBtn = document.getElementById('cf-submit-btn');
+                    const successBox = document.getElementById('cf-success-msg');
+
+
+                    submitBtn.classList.add('sending');
+                    submitBtn.style.backgroundColor = '#2ecc71'; 
+
+
+                    successBox.style.display = 'flex';
+
+
+                    setTimeout(() => {
+                        window.location.href = "404page.html";
+                    }, 1500);
+                }
+            });
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            const cfSection = document.querySelector(".contact-form-section");
+
+            if (cfSection) {
+
+                gsap.fromTo(".cf-left-col",
+                    { x: -80, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: ".cf-container", start: "top 80%" }
+                    }
+                );
+
+
+                gsap.fromTo(".cf-right-col",
+                    { x: 80, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: ".cf-container", start: "top 80%" }
+                    }
+                );
+            }
+        }
+
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            const smSection = document.querySelector(".store-map-section");
+
+            if (smSection) {
+
+                gsap.fromTo(".sm-floating-panel",
+                    { x: -50, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1.2, ease: "power3.out",
+                        scrollTrigger: { trigger: smSection, start: "top 70%" }
+                    }
+                );
+
+
+                gsap.fromTo(".sm-custom-pin",
+                    { y: -100, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "bounce.out", delay: 0.5,
+                        scrollTrigger: { trigger: smSection, start: "top 70%" }
+                    }
+                );
+            }
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            const ciSection = document.querySelector(".contact-info-section");
+
+            if (ciSection) {
+
+                gsap.fromTo(".ci-header",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: ciSection, start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".ci-animated-line",
+                    { scaleX: 0, transformOrigin: "left center" },
+                    {
+                        scaleX: 1, duration: 1.5, ease: "power3.inOut",
+                        scrollTrigger: { trigger: ".ci-strip-wrapper", start: "top 80%" }
+                    }
+                );
+
+
+                gsap.fromTo(".ci-panel",
+                    { y: 60, opacity: 0, scale: 0.95 },
+                    {
+                        y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.15, ease: "back.out(1.2)",
+                        scrollTrigger: { trigger: ".ci-panels", start: "top 80%" }
+                    }
+                );
+            }
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const gcsSection = document.querySelector(".grocery-cta-section");
+
+            if (gcsSection) {
+
+
+                gsap.to(".gcs-bg-img", {
+                    y: "20%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: gcsSection,
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+
+
+                gsap.fromTo([".gcs-heading", ".gcs-desc", ".gcs-btn-group a"],
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: { trigger: ".gcs-content", start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".gcs-marquee",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.3,
+                        scrollTrigger: { trigger: gcsSection, start: "top 85%" }
+                    }
+                );
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

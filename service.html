@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Grocery Store</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-bg"></div>
+        <div class="glass-card">
+            <div class="premium-spinner"></div>
+            <div class="loader-text">Preparing Fresh Groceries...</div>
+        </div>
+    </div>
+
+    <div class="top-bar" id="top-bar">
+        <div class="moving-text">
+            <span> Special Offer: Get 20% Off on Fresh Organic Vegetables! Use Code: FRESH20 | Free Delivery on orders
+                above $50! </span>
+        </div>
+        <div class="close-btn-bg">
+            <span class="close-btn" id="close-top-bar">&times;</span>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-mobile-header">
+                <a href="index.html" class="logo"><img src="./asset/s1.webp" alt="logo"></a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item mobile-auth">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="signup.html" class="btn btn-signup">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-auth" data-aos="fade-left" data-aos-delay="700">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="signup.html" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="services-hero-section" id="services-hero">
+
+
+        <div class="srv-bg-slider">
+            <div class="srv-bg-slide active" style="background-image: url('./asset/q9.webp');">
+            </div>
+            <div class="srv-bg-slide" style="background-image: url('./asset/q10.webp');">
+            </div>
+        </div>
+
+        <div class="srv-overlay"></div>
+
+        <div class="srv-container">
+
+
+            <div class="srv-left-col">
+                <div class="srv-breadcrumb">
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <span class="divider">/</span>
+                    <span class="current">Services</span>
+                </div>
+
+                <div class="srv-content-slider">
+
+
+                    <div class="srv-content-slide active">
+                        <h1>Everything Your Kitchen Needs, <span>Delivered Better.</span></h1>
+                        <p>More than just grocery delivery. We bring farm-fresh quality, handpicked essentials, and
+                            unmatched convenience right to your doorstep.</p>
+                        <a href="404page.html" class="srv-btn">Start Shopping <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+
+                    <div class="srv-content-slide">
+                        <h1>Premium Services For Your <span>Daily Needs.</span></h1>
+                        <p>Experience lightning-fast delivery and top-tier organic products carefully curated to keep
+                            your family healthy and happy.</p>
+                        <a href="404page.html" class="srv-btn">Explore Services <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="srv-right-col">
+                <div class="srv-image-wrapper">
+                    <img src="./asset/w21.webp" alt="Fresh Vegetables Basket">
+
+
+                    <div class="srv-float-badge srv-badge-top">
+                        <div class="srv-badge-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div>
+                            <strong>Same Day</strong>
+                            <span>Express Delivery</span>
+                        </div>
+                    </div>
+
+
+                    <div class="srv-float-badge srv-badge-bottom">
+                        <div class="srv-badge-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <div>
+                            <strong>Freshness</strong>
+                            <span>100% Guaranteed</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="hiw-zz-section" id="how-it-works">
+        <div class="hiw-zz-header">
+            <h2 class="hiw-zz-gradient-heading">How Our Service Works</h2>
+            <p class="hiw-zz-subheading">A seamless, hassle-free journey designed to bring the freshest groceries
+                directly to your doorstep.</p>
+        </div>
+
+        <div class="hiw-zz-container">
+
+            <div class="hiw-zz-timeline">
+
+                <div class="hiw-zz-line-bg"></div>
+                <div class="hiw-zz-line-fill"></div>
+
+
+                <div class="hiw-zz-step">
+                    <div class="hiw-zz-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <div class="hiw-zz-content">
+                        <div class="hiw-zz-card">
+                            <span class="hiw-zz-step-num">Step 01</span>
+                            <h3>Browse</h3>
+                            <p>Explore our wide range of fresh, organic groceries directly from our app or website.</p>
+                            <a href="404page.html" class="hiw-zz-btn">Start Browsing <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hiw-zz-step">
+                    <div class="hiw-zz-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+                    <div class="hiw-zz-content">
+                        <div class="hiw-zz-card">
+                            <span class="hiw-zz-step-num">Step 02</span>
+                            <h3>Choose</h3>
+                            <p>Select your desired products, choose variants, and easily set the quantity you need.</p>
+                            <a href="404page.html" class="hiw-zz-btn">View Products <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hiw-zz-step">
+                    <div class="hiw-zz-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <div class="hiw-zz-content">
+                        <div class="hiw-zz-card">
+                            <span class="hiw-zz-step-num">Step 03</span>
+                            <h3>Checkout</h3>
+                            <p>Complete your order safely with our fast, encrypted, and highly secure payment gateways.
+                            </p>
+                            <a href="404page.html" class="hiw-zz-btn">Secure Checkout <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hiw-zz-step">
+                    <div class="hiw-zz-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <div class="hiw-zz-content">
+                        <div class="hiw-zz-card">
+                            <span class="hiw-zz-step-num">Step 04</span>
+                            <h3>Pack</h3>
+                            <p>Your items are carefully handpicked, quality-checked, and packed in eco-friendly
+                                materials.</p>
+                            <a href="404page.html" class="hiw-zz-btn">Our Packaging <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hiw-zz-step">
+                    <div class="hiw-zz-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <div class="hiw-zz-content">
+                        <div class="hiw-zz-card">
+                            <span class="hiw-zz-step-num">Step 05</span>
+                            <h3>Delivered</h3>
+                            <p>Fresh groceries reach your door in record time with our dedicated express delivery team.
+                            </p>
+                            <a href="404page.html" class="hiw-zz-btn">Track Order <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="express-delivery-section" id="express-delivery">
+        <div class="ed-container">
+
+            <div class="ed-left-col">
+                <div class="ed-image-wrapper">
+                    <div class="ed-bg-image" style="background-image: url('./asset/w26.webp');">
+                    </div>
+
+                    <div class="ed-live-badge">
+                        <div class="ed-pulse-dot"></div>
+                        <div class="ed-badge-text">
+                            <strong>Live Tracking</strong>
+                            <span>ETA: 30 Mins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ed-right-col">
+                <h2 class="ed-heading">Need It Fast? <br><span>We've Got You.</span></h2>
+                <p class="ed-desc">Experience lightning-fast grocery delivery. Track your order in real-time from our
+                    store straight to your kitchen.</p>
+
+                <div class="ed-tracking-wrapper">
+                    <div class="ed-track-line-bg"></div>
+                    <div class="ed-track-line-fill"></div>
+
+                    <div class="ed-track-step">
+                        <div class="ed-step-icon"><i class="fa-solid fa-check-circle"></i></div>
+                        <div class="ed-step-content">
+                            <h4>Order Confirmed</h4>
+                            <p>Your items are locked and ready for processing.</p>
+                        </div>
+                    </div>
+
+                    <div class="ed-track-step">
+                        <div class="ed-step-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <div class="ed-step-content">
+                            <h4>Packed Fresh</h4>
+                            <p>Quality checked and packed securely.</p>
+                        </div>
+                    </div>
+
+                    <div class="ed-track-step ed-step-truck">
+                        <div class="ed-step-icon"><i class="fa-solid fa-truck-fast ed-truck-icon"></i></div>
+                        <div class="ed-step-content">
+                            <h4>Out for Delivery</h4>
+                            <p>Our rider is on the way to your location.</p>
+                        </div>
+                    </div>
+
+                    <div class="ed-track-step ed-step-home">
+                        <div class="ed-step-icon"><i class="fa-solid fa-house-chimney ed-home-icon"></i></div>
+                        <div class="ed-step-content">
+                            <h4>At Your Door</h4>
+                            <p>Fresh groceries delivered successfully.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="smart-subs-section" id="smart-subscriptions">
+        <div class="ssb-header">
+            <h2 class="ssb-gradient-heading">Smart Grocery Subscriptions</h2>
+            <p class="ssb-subheading">Choose a plan that fits your lifestyle. Save more and never run out of your
+                everyday kitchen essentials.</p>
+        </div>
+
+        <div class="ssb-container">
+            <div class="ssb-accordion-wrapper">
+
+
+                <div class="ssb-card active"
+                    style="background-image: linear-gradient(rgba(13, 27, 18, 0.85), rgba(13, 27, 18, 0.95)), url('./asset/w17.webp');">
+
+
+                    <div class="ssb-collapsed">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <h3>Weekly Essentials</h3>
+                    </div>
+
+
+                    <div class="ssb-expanded">
+                        <div class="ssb-expanded-content">
+                            <div class="ssb-plan-header">
+                                <div>
+                                    <h3>Weekly Essentials</h3>
+                                    <span>For everyday groceries</span>
+                                </div>
+                                <div class="ssb-price">
+                                    <h2>$29<span>/wk</span></h2>
+                                </div>
+                            </div>
+
+                            <ul class="ssb-features">
+                                <li><i class="fa-solid fa-check"></i> Fresh everyday veggies & fruits</li>
+                                <li><i class="fa-solid fa-check"></i> Delivered every Monday morning</li>
+                                <li><i class="fa-solid fa-check"></i> Save up to 15% on regular prices</li>
+                            </ul>
+
+                            <a href="404page.html" class="ssb-btn">Subscribe Now <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ssb-card"
+                    style="background-image: linear-gradient(rgba(13, 27, 18, 0.85), rgba(13, 27, 18, 0.95)), url('./asset/w24.webp');">
+
+                    <div class="ssb-collapsed">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Family Basket</h3>
+                    </div>
+
+                    <div class="ssb-expanded">
+                        <div class="ssb-expanded-content">
+                            <div class="ssb-plan-header">
+                                <div>
+                                    <h3>Family Basket</h3>
+                                    <span>For larger households</span>
+                                </div>
+                                <div class="ssb-price">
+                                    <h2>$79<span>/wk</span></h2>
+                                </div>
+                            </div>
+
+                            <ul class="ssb-features">
+                                <li><i class="fa-solid fa-check"></i> Bulk groceries for 4-5 members</li>
+                                <li><i class="fa-solid fa-check"></i> Flexible bi-weekly or weekly delivery</li>
+                                <li><i class="fa-solid fa-check"></i> Save up to 20% on all premium items</li>
+                            </ul>
+
+                            <a href="404page.html" class="ssb-btn">Subscribe Now <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ssb-card"
+                    style="background-image: linear-gradient(rgba(13, 27, 18, 0.85), rgba(13, 27, 18, 0.95)), url(./asset/w18.webp);">
+
+                    <div class="ssb-collapsed">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <h3>Monthly Pantry</h3>
+                    </div>
+
+                    <div class="ssb-expanded">
+                        <div class="ssb-expanded-content">
+                            <div class="ssb-plan-header">
+                                <div>
+                                    <h3>Monthly Pantry</h3>
+                                    <span>Stock up on regular essentials</span>
+                                </div>
+                                <div class="ssb-price">
+                                    <h2>$149<span>/mo</span></h2>
+                                </div>
+                            </div>
+
+                            <ul class="ssb-features">
+                                <li><i class="fa-solid fa-check"></i> Rice, flour, spices & household staples</li>
+                                <li><i class="fa-solid fa-check"></i> Delivered once on the 1st of every month</li>
+                                <li><i class="fa-solid fa-check"></i> Maximum savings up to 25% + freebies</li>
+                            </ul>
+
+                            <a href="404page.html" class="ssb-btn">Subscribe Now <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="personalized-deals-section" id="personalized-deals">
+
+
+        <div class="deals-ticker-wrapper">
+            <div class="deals-ticker-track">
+                <span><i class="fa-solid fa-tags"></i> Fresh Friday — 20% OFF</span>
+                <span><i class="fa-solid fa-basket-shopping"></i> Weekend Basket — ₹200 OFF</span>
+                <span><i class="fa-solid fa-apple-whole"></i> Fruit Fest — Buy 2 Get 1</span>
+                <span><i class="fa-solid fa-jar"></i> Pantry Week — Extra Savings</span>
+
+
+                <span><i class="fa-solid fa-tags"></i> Fresh Friday — 20% OFF</span>
+                <span><i class="fa-solid fa-basket-shopping"></i> Weekend Basket — ₹200 OFF</span>
+                <span><i class="fa-solid fa-apple-whole"></i> Fruit Fest — Buy 2 Get 1</span>
+                <span><i class="fa-solid fa-jar"></i> Pantry Week — Extra Savings</span>
+            </div>
+        </div>
+
+        <div class="deals-container">
+
+            <div class="deals-header">
+                <h2 class="deals-gradient-heading">The More You Shop, <br><span>The More You Save.</span></h2>
+                <p class="deals-subheading">Unlock exclusive personalized deals and maximum savings on your daily
+                    essential groceries.</p>
+            </div>
+
+            <div class="deals-grid">
+
+
+                <div class="deal-card">
+                    <div class="deal-bg" style="background-image: url('./asset/q24.webp');">
+                    </div>
+                    <div class="deal-overlay"></div>
+                    <div class="deal-badge">20% OFF</div>
+                    <div class="deal-content">
+                        <h3>Fresh Friday</h3>
+                        <p>Start your weekend with farm-fresh organic veggies.</p>
+                        <a href="404page.html" class="deal-claim-btn">Claim Offer <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="deal-card">
+                    <div class="deal-bg" style="background-image: url(./asset/w27.webp);">
+                    </div>
+                    <div class="deal-overlay"></div>
+                    <div class="deal-badge">₹200 OFF</div>
+                    <div class="deal-content">
+                        <h3>Weekend Basket</h3>
+                        <p>Flat ₹200 off on all mixed grocery orders above ₹1000.</p>
+                        <a href="404page.html" class="deal-claim-btn">Claim Offer <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="deal-card">
+                    <div class="deal-bg" style="background-image: url('./asset/w21.webp');">
+                    </div>
+                    <div class="deal-overlay"></div>
+                    <div class="deal-badge">Buy 2 Get 1</div>
+                    <div class="deal-content">
+                        <h3>Fruit Fest</h3>
+                        <p>Enjoy premium seasonal and exotic fruits directly from orchards.</p>
+                        <a href="404page.html" class="deal-claim-btn">Claim Offer <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="deal-card">
+                    <div class="deal-bg" style="background-image: url(./asset/q5.webp);">
+                    </div>
+                    <div class="deal-overlay"></div>
+                    <div class="deal-badge">Extra Savings</div>
+                    <div class="deal-content">
+                        <h3>Pantry Week</h3>
+                        <p>Stock up on rice, grains, and spices with unbelievable discounts.</p>
+                        <a href="404page.html" class="deal-claim-btn">Claim Offer <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="deals-action-wrapper">
+                <a href="404page.html" class="deals-view-all-btn">View All Offers <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="perfect-basket-section" id="perfect-basket">
+        <div class="pb-header">
+            <h2 class="pb-gradient-heading">Build Your Perfect Basket</h2>
+            <p class="pb-subheading">Select your favorite daily essentials and watch them magically add to your cart.
+            </p>
+        </div>
+
+        <div class="pb-container">
+
+
+            <div class="pb-products-col">
+
+                <div class="pb-product-card" data-id="1" data-name="Fresh Carrots" data-price="45"
+                    data-img="./asset/w2.webp">
+                    <div class="pb-img-box"><img src="./asset/w2.webp" alt="Carrots"></div>
+                    <div class="pb-info">
+                        <h4>Fresh Carrots</h4>
+                        <span>₹45 / kg</span>
+                    </div>
+                    <button class="pb-add-btn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="pb-product-card" data-id="2" data-name="Organic Milk" data-price="65"
+                    data-img="./asset/w30.webp">
+                    <div class="pb-img-box"><img src="./asset/w30.webp" alt="Milk"></div>
+                    <div class="pb-info">
+                        <h4>Organic Milk</h4>
+                        <span>₹65 / L</span>
+                    </div>
+                    <button class="pb-add-btn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="pb-product-card" data-id="3" data-name="Fuji Apples" data-price="180"
+                    data-img="./asset/w28.webp">
+                    <div class="pb-img-box"><img src="./asset/w28.webp" alt="Apples"></div>
+                    <div class="pb-info">
+                        <h4>Fuji Apples</h4>
+                        <span>₹180 / kg</span>
+                    </div>
+                    <button class="pb-add-btn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="pb-product-card" data-id="4" data-name="Whole Wheat Bread" data-price="40"
+                    data-img="./asset/w6.webp">
+                    <div class="pb-img-box"><img src="./asset/w6.webp" alt="Bread"></div>
+                    <div class="pb-info">
+                        <h4>Whole Wheat Bread</h4>
+                        <span>₹40 / pack</span>
+                    </div>
+                    <button class="pb-add-btn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="pb-product-card" data-id="5" data-name="Farm Eggs" data-price="85"
+                    data-img="./asset/w29.webp">
+                    <div class="pb-img-box"><img src="./asset/w29.webp" alt="Eggs"></div>
+                    <div class="pb-info">
+                        <h4>Farm Eggs (6 pcs)</h4>
+                        <span>₹85 / box</span>
+                    </div>
+                    <button class="pb-add-btn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="pb-product-card" data-id="6" data-name="Fresh Broccoli" data-price="120"
+                    data-img="./asset/w10.webp">
+                    <div class="pb-img-box"><img src="./asset/w10.webp" alt="Broccoli"></div>
+                    <div class="pb-info">
+                        <h4>Fresh Broccoli</h4>
+                        <span>₹120 / kg</span>
+                    </div>
+                    <button class="pb-add-btn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+            </div>
+
+
+            <div class="pb-basket-col">
+                <div class="pb-basket-card" id="pb-basket-target">
+
+                    <div class="pb-basket-header">
+                        <h3><i class="fa-solid fa-basket-shopping"></i> My Basket</h3>
+                        <button class="pb-clear-btn" id="pb-clear">Clear</button>
+                    </div>
+
+                    <div class="pb-basket-items" id="pb-items-list">
+
+                        <div class="pb-empty-state" id="pb-empty">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <p>Your basket is empty.<br>Add items to get started!</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pb-basket-footer">
+                        <div class="pb-totals">
+                            <span id="pb-count">0 Items</span>
+                            <h2 id="pb-total">₹0</h2>
+                        </div>
+                        <a href="404page.html" class="pb-checkout-btn">Add to My Cart <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div id="pb-fly-layer"></div>
+
+
+    <section class="final-cta-section" id="final-cta">
+
+
+        <div class="fcta-bg-wrapper">
+            <div class="fcta-bg-image" style="background-image: url('./asset/w26.webp');"></div>
+            <div class="fcta-overlay"></div>
+        </div>
+
+
+        <div class="fcta-content">
+            <span class="fcta-subtitle">Make Grocery Shopping Effortless</span>
+            <h2 class="fcta-heading">Fresh Groceries.<br><span>Smarter Shopping.</span><br>Happier Homes.</h2>
+            <p class="fcta-desc">Discover everything your kitchen needs and get it delivered fresh to your doorstep in
+                record time.</p>
+
+            <div class="fcta-buttons">
+                <a href="404page.html" class="btn-fcta-primary">Shop Now <i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="404page.html" class="btn-fcta-secondary">Explore Categories <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+
+        <div class="fcta-marquee-wrapper">
+            <div class="fcta-marquee-track">
+                <span><i class="fa-solid fa-star-of-life"></i> Fresh Fruits</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Vegetables</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Dairy</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Bakery</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Pantry</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Beverages</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Household Essentials</span>
+
+
+                <span><i class="fa-solid fa-star-of-life"></i> Fresh Fruits</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Vegetables</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Dairy</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Bakery</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Pantry</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Beverages</span>
+                <span><i class="fa-solid fa-star-of-life"></i> Household Essentials</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html" class="footer-logo"><img src="./asset/s1.webp" alt="logo"></a>
+
+
+                <div class="footer-search">
+                    <h4>Search & Order</h4>
+                    <div class="search-box">
+                        <input type="text" id="footer-search-input" placeholder="Type an item to order...">
+                        <button onclick="window.location.href='404page.html'" id="footer-search-btn"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div id="footer-message" class="footer-message"></div>
+                </div>
+
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="blog.html">Latest Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="404page.html">Fresh Vegetables</a></li>
+                    <li><a href="404page.html">Organic Fruits</a></li>
+                    <li><a href="404page.html">Dairy & Eggs</a></li>
+                    <li><a href="404page.html">Beverages & Snacks</a></li>
+                    <li><a href="404page.html">Daily Essentials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 7:00 AM – 10:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 FreshMart Grocery. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+
+        const srvBgSlides = document.querySelectorAll('.srv-bg-slide');
+        const srvTextSlides = document.querySelectorAll('.srv-content-slide');
+        let srvSlideIndex = 0;
+
+        if (srvBgSlides.length > 0 && srvTextSlides.length > 0) {
+            setInterval(() => {
+                srvBgSlides[srvSlideIndex].classList.remove('active');
+                srvTextSlides[srvSlideIndex].classList.remove('active');
+
+                srvSlideIndex = (srvSlideIndex + 1) % srvBgSlides.length;
+
+                srvBgSlides[srvSlideIndex].classList.add('active');
+                srvTextSlides[srvSlideIndex].classList.add('active');
+            }, 5000);
+        }
+
+
+        if (typeof gsap !== 'undefined') {
+            const srvHero = document.querySelector(".services-hero-section");
+
+            if (srvHero) {
+
+                gsap.fromTo(".srv-left-col",
+                    { x: -100, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
+                );
+
+
+                gsap.fromTo(".srv-image-wrapper",
+                    { x: 100, scale: 0.9, opacity: 0 },
+                    { x: 0, scale: 1, opacity: 1, duration: 1.2, ease: "power3.out" }
+                );
+
+
+                gsap.fromTo([".srv-badge-top", ".srv-badge-bottom"],
+                    { scale: 0, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 1, stagger: 0.3, delay: 0.8, ease: "back.out(1.5)" }
+                );
+            }
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const zzTimeline = document.querySelector('.hiw-zz-timeline');
+            const zzSteps = document.querySelectorAll('.hiw-zz-step');
+
+            if (zzTimeline && zzSteps.length > 0) {
+
+
+                gsap.to(zzTimeline, {
+                    "--zz-progress": "100%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hiw-zz-timeline",
+                        start: "top 50%",
+                        end: "bottom 70%",
+                        scrub: 1
+                    }
+                });
+
+
+                zzSteps.forEach((step, index) => {
+
+                    const cardContent = step.querySelector('.hiw-zz-content');
+
+                    const isOdd = index % 2 === 0;
+                    const xOffset = window.innerWidth > 991 ? (isOdd ? -100 : 100) : 50;
+
+                    gsap.fromTo(cardContent,
+                        { x: xOffset, opacity: 0 },
+                        {
+                            x: 0, opacity: 1, duration: 1, ease: "power3.out",
+                            scrollTrigger: {
+                                trigger: step,
+                                start: "top 80%"
+                            }
+                        }
+                    );
+
+
+                    ScrollTrigger.create({
+                        trigger: step,
+                        start: "top 50%",
+                        onEnter: () => step.classList.add('active'),
+                        onLeaveBack: () => step.classList.remove('active')
+                    });
+                });
+            }
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const edSection = document.querySelector(".express-delivery-section");
+
+            if (edSection) {
+
+
+                gsap.fromTo(".ed-left-col",
+                    { x: -100, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 1.2, ease: "power3.out",
+                        scrollTrigger: { trigger: edSection, start: "top 75%" }
+                    }
+                );
+
+
+                gsap.fromTo(".ed-heading, .ed-desc",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out",
+                        scrollTrigger: { trigger: ".ed-right-col", start: "top 80%" }
+                    }
+                );
+
+
+                gsap.to(".ed-tracking-wrapper", {
+                    "--ed-progress": "100%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".ed-tracking-wrapper",
+                        start: "top 70%",
+                        end: "bottom 85%",
+                        scrub: 1
+                    }
+                });
+
+
+                gsap.fromTo(".ed-track-step",
+                    { x: 100, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: { trigger: ".ed-tracking-wrapper", start: "top 75%" }
+                    }
+                );
+            }
+        }
+
+
+
+        const ssbCards = document.querySelectorAll('.ssb-card');
+
+        if (ssbCards.length > 0) {
+            ssbCards.forEach(card => {
+
+                card.addEventListener('mouseenter', () => {
+                    ssbCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                });
+
+                card.addEventListener('click', () => {
+                    ssbCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                });
+            });
+        }
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            const ssbSection = document.querySelector(".smart-subs-section");
+
+            if (ssbSection) {
+
+                gsap.fromTo(".ssb-header",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: ssbSection, start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".ssb-card",
+                    { y: 80, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out",
+                        scrollTrigger: { trigger: ".ssb-accordion-wrapper", start: "top 75%" }
+                    }
+                );
+            }
+        }
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const dealsSection = document.querySelector(".personalized-deals-section");
+
+            if (dealsSection) {
+
+
+                gsap.fromTo(".deals-header",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: ".deals-header", start: "top 85%" }
+                    }
+                );
+
+
+                gsap.fromTo(".deal-card",
+                    { y: 80, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: { trigger: ".deals-grid", start: "top 80%" }
+                    }
+                );
+
+
+                gsap.fromTo(".deals-action-wrapper",
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
+                        scrollTrigger: { trigger: ".deals-action-wrapper", start: "top 90%" }
+                    }
+                );
+            }
+        }
+
+
+        if (typeof gsap !== 'undefined') {
+
+
+            const pbSection = document.querySelector(".perfect-basket-section");
+            if (pbSection) {
+                gsap.fromTo(".pb-products-col .pb-product-card",
+                    { y: 50, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "power3.out", scrollTrigger: { trigger: ".pb-products-col", start: "top 80%" } }
+                );
+                gsap.fromTo(".pb-basket-col",
+                    { x: 50, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: ".pb-container", start: "top 75%" } }
+                );
+            }
+
+
+            let basket = [];
+            const addBtns = document.querySelectorAll('.pb-add-btn');
+            const itemsList = document.getElementById('pb-items-list');
+            const emptyState = document.getElementById('pb-empty');
+            const countEl = document.getElementById('pb-count');
+            const totalEl = document.getElementById('pb-total');
+            const clearBtn = document.getElementById('pb-clear');
+            const flyLayer = document.getElementById('pb-fly-layer');
+            const targetBasket = document.getElementById('pb-basket-target');
+
+            function updateBasketUI() {
+
+                document.querySelectorAll('.pb-basket-item').forEach(el => el.remove());
+
+                let totalQty = 0;
+                let totalPrice = 0;
+
+                if (basket.length === 0) {
+                    emptyState.style.display = 'block';
+                } else {
+                    emptyState.style.display = 'none';
+                    basket.forEach(item => {
+                        totalQty += item.qty;
+                        totalPrice += (item.price * item.qty);
+
+                        const itemHTML = `
+                        <div class="pb-basket-item">
+                            <img src="${item.img}" alt="${item.name}">
+                            <div class="pb-bi-info">
+                                <h5>${item.name}</h5>
+                                <span>₹${item.price}</span>
+                            </div>
+                            <div class="pb-bi-qty">x${item.qty}</div>
+                        </div>
+                    `;
+                        itemsList.insertAdjacentHTML('beforeend', itemHTML);
+                    });
+                }
+
+                countEl.innerText = `${totalQty} Items`;
+
+
+                gsap.to(totalEl, {
+                    innerHTML: totalPrice,
+                    duration: 0.5,
+                    snap: { innerHTML: 1 },
+                    onUpdate: function () { totalEl.innerText = "₹" + Math.round(this.targets()[0].innerHTML); }
+                });
+            }
+
+
+            addBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    const card = this.closest('.pb-product-card');
+                    const id = card.getAttribute('data-id');
+                    const name = card.getAttribute('data-name');
+                    const price = parseInt(card.getAttribute('data-price'));
+                    const img = card.getAttribute('data-img');
+
+
+                    const imgEl = card.querySelector('.pb-img-box img');
+                    const imgRect = imgEl.getBoundingClientRect();
+                    const basketRect = targetBasket.getBoundingClientRect();
+
+                    const flyingImg = document.createElement('img');
+                    flyingImg.src = img;
+                    flyingImg.className = 'pb-flying-img';
+                    flyingImg.style.left = imgRect.left + 'px';
+                    flyingImg.style.top = imgRect.top + 'px';
+                    flyLayer.appendChild(flyingImg);
+
+
+                    gsap.to(flyingImg, {
+                        x: basketRect.left - imgRect.left + (basketRect.width / 2) - 30,
+                        y: basketRect.top - imgRect.top + 50,
+                        scale: 0.2,
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: "power2.inOut",
+                        onComplete: () => {
+                            flyingImg.remove();
+
+
+                            const existing = basket.find(i => i.id === id);
+                            if (existing) {
+                                existing.qty += 1;
+                            } else {
+                                basket.push({ id, name, price, img, qty: 1 });
+                            }
+                            updateBasketUI();
+
+
+                            gsap.fromTo(targetBasket, { scale: 0.98 }, { scale: 1, duration: 0.3, ease: "back.out(2)" });
+                        }
+                    });
+                });
+            });
+
+
+            clearBtn.addEventListener('click', () => {
+                basket = [];
+                updateBasketUI();
+            });
+        }
+
+
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+            const fctaSection = document.querySelector(".final-cta-section");
+
+            if (fctaSection) {
+
+
+                gsap.to(".fcta-bg-image", {
+                    y: "15%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: fctaSection,
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+
+
+                gsap.fromTo([".fcta-subtitle", ".fcta-heading", ".fcta-desc", ".fcta-buttons a"],
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power3.out",
+                        scrollTrigger: { trigger: ".fcta-content", start: "top 80%" }
+                    }
+                );
+
+
+                gsap.fromTo(".fcta-marquee-wrapper",
+                    { y: 100, opacity: 0 },
+                    {
+                        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: { trigger: fctaSection, start: "top 80%" }
+                    }
+                );
+            }
+        }
+
+    </script>
+</body>
+
+</html>
